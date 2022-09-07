@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto',Arial, Helvetica, sans-serif;
+}
+
+/*FORMULARIO REGISTRO*/
+
+.body-form{
+    background-color: #E7F6F2;
+}
+div .col-form form{
+    width: 450px;
+    
+}
+.col-form form .botones{
+    text-align: center;
+}
+/*FORMULARIO INICIO DE SESION*/
+
+div img{
+    width: 650px;
+    height: 100vh;
+}
+
+div .col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E7F6F2;
+    height: 100vh;
+  
+}
+form{
+    width:350px;
+}
+
+.btn-confirmar{
+    text-align: center;
+    margin-top: 35px;
+}
+div .icon-user {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: #293462;
+}
+@media (min-width:650px){
+    div img{
+        width: 950px;
+    }
+}
+
+    
