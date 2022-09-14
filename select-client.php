@@ -85,8 +85,8 @@
                         <h6 class="collapse-header">Utilidades:</h6>
                         <a class="collapse-item" href="#">Registrar Incidente</a>
                         <a class="collapse-item" href="#">Consultar Casos</a>
-                        <a class="collapse-item" href="#">Registrar Clientes</a>
-                        <a class="collapse-item" href="#">Consultar Clientes</a>
+                        <a class="collapse-item" href="register-client.php">Registrar Clientes</a>
+                        <a class="collapse-item" href="select-client.php">Consultar Clientes</a>
                     </div>
                 </div>
             </li>
@@ -351,11 +351,13 @@
                                     <span class="input-group-text w-25 d-inline" id="basic-addon2">Identificacion</span>
                                     <input type="text" class="form-control" aria-label="Identificacion" aria-describedby="basic-addon1">
                                 </div>
-
-                                <table class="table mt-5">
+                                <div class="d-flex justify-content-center">
+                                    <button onClick="mensaje(); reset()" type="button" class="btn btn-primary">Buscar</button>
+                                </div>   
+                                <table class="table table-striped table-bordered table-hover mt-5">
                                     <thead>
                                         <tr>
-                                        <th scope="col">#</th>
+                                        <th scope="col">Id</th>
                                         <th scope="col">No Documento</th>
                                         <th scope="col">Nombres</th>
                                         <th scope="col">Apellidos</th>
@@ -480,10 +482,6 @@
                                       
                                     </tbody>
                                     </table>
-
-                                <div class="d-flex justify-content-center">
-                                    <input onClick="mensaje(); reset()" type="button" value="Registrar Cliente" class="btn btn-primary mt-3"></input>
-                                </div>
                             </form>
 
 

@@ -41,12 +41,7 @@ div .icon-user {
 }
 @media (min-width:1024px){
     div img{
-        width: 950px;
+        width: 650px;
     }
 }
-@media (min-width:768px)and(max-width:1023px){
-    div img{
-        width: 950px;
-    }
-}
-    
+  

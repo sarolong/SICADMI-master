@@ -85,8 +85,8 @@
                         <h6 class="collapse-header">Utilidades:</h6>
                         <a class="collapse-item" href="#">Registrar Incidente</a>
                         <a class="collapse-item" href="#">Consultar Casos</a>
-                        <a class="collapse-item" href="#">Registrar Clientes</a>
-                        <a class="collapse-item" href="#">Consultar Clientes</a>
+                        <a class="collapse-item" href="register-client.php">Registrar Clientes</a>
+                        <a class="collapse-item" href="select-client.php">Consultar Clientes</a>
                     </div>
                 </div>
             </li>
