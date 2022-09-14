@@ -108,9 +108,9 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Zona de logueo:</h6>
-                        <a class="collapse-item" href="register.html">Registrarse</a>
-                        <a class="collapse-item" href="forgot-password.html">Olvidó su Contraseña</a>
+                        <h6 class="collapse-header">Personalizados:</h6>
+                        <a class="collapse-item" href="#">Por Asignar</a>
+                        <a class="collapse-item" href="#">Por Asignar</a>
                     </div>
                 </div>
             </li>

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SICADMI - Dashboard</title>
+    <title>Select</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -29,7 +29,6 @@
         header('location: LoginPagi.php');
     }
     ?>
-    
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -86,8 +85,8 @@
                         <h6 class="collapse-header">Utilidades:</h6>
                         <a class="collapse-item" href="#">Registrar Incidente</a>
                         <a class="collapse-item" href="#">Consultar Casos</a>
-                        <a class="collapse-item" href="register-client.php">Registrar Clientes</a>
-                        <a class="collapse-item" href="select-client.php">Consultar Clientes</a>
+                        <a class="collapse-item" href="#">Registrar Clientes</a>
+                        <a class="collapse-item" href="#">Consultar Clientes</a>
                     </div>
                 </div>
             </li>
@@ -109,9 +108,9 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Por asignar:</h6>
-                        <a class="collapse-item" href="">Por asignar:</a>
-                        <a class="collapse-item" href="">Por asignar</a>
+                        <h6 class="collapse-header">Personalizados:</h6>
+                        <a class="collapse-item" href="#">Por Asignar</a>
+                        <a class="collapse-item" href="#">Por Asignar</a>
                     </div>
                 </div>
             </li>
@@ -335,144 +334,155 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i>Generar Reporte</a>
+                        <h1 class="h3 mb-0 text-gray-800">Dashboard - Querys</h1>
                     </div>
 
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Agendadas</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">40</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Tickets</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">215</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tareas
-                                            </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="progress progress-sm mr-2">
-                                                        <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Respuestas Pendientes</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Content Row -->
+                    <!-- DASCHBOARD -->
 
                     <div class="row justify-content-center">
 
                         <!-- Area registro -->
                         <div class="col-lg-8 mb-4 px-0">
                             <div class="card-header py-3 text-center">
-                                <h3 class="m-0 font-weight-bold text-primary">Registrar Ticket</h3>
+                                <h3 class="m-0 font-weight-bold text-primary">Consultar Clientes</h3>
                             </div>
                             <form id="ticket">
                                 <div class="input-group mb-3">
-                                    <span class="input-group-text">Describalo aquí</span>
-                                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                                    <span class="input-group-text w-25 d-inline" id="basic-addon2">Identificacion</span>
+                                    <input type="text" class="form-control" aria-label="Identificacion" aria-describedby="basic-addon1">
                                 </div>
 
-                                <div class="input-group mb-3">
-                                    <input type="date" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
-                                    <span class="input-group-text" id="basic-addon2">Fecha Inicial</span>
-                                </div>
-
-                                <div class="input-group mb-3">
-                                    <input type="date" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                    <span class="input-group-text" id="basic-addon2">Fecha Final</span>
-                                </div>
-                            
-                                <div class="input-group mb-2">
-                                    <select class="form-control" name="menu-estado" id="menu-estado">
-                                            <option value="activate">Activo</option>
-                                            <option value="closed">Cerrado</option>
-                                    </select>
-                                    <input type="text" class="form-control" placeholder="Estado del caso" aria-label="Text input with radio button">
-                                </div>
-                                <div class="input-group mb-2">
-                                    <select class="form-control" name="menu-cliente" id="menu-cliente">
-                                            <option value="activate">Activo</option>
-                                            <option value="closed">Cerrado</option>
-                                    </select>
-                                    <input type="text" class="form-control" placeholder="Seleccion el cliente" aria-label="Text input with radio button">
-                                </div>
-                                <div class="input-group mb-2">
-                                    <select class="form-control" name="menu-servicio" id="menu-servicio">
-                                            <option value="activate">Activo</option>
-                                            <option value="closed">Cerrado</option>
-                                    </select>
-                                    <input type="text" class="form-control" placeholder="Seleccione el servicio" aria-label="Text input with radio button">
-                                </div>
+                                <table class="table mt-5">
+                                    <thead>
+                                        <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">No Documento</th>
+                                        <th scope="col">Nombres</th>
+                                        <th scope="col">Apellidos</th>
+                                        <th scope="col">Genero</th>
+                                        <th scope="col">Correo</th>
+                                        <th scope="col">Direccion</th>
+                                        <th scope="col">Telefono</th>
+                                        <th scope="col">Opciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                        </tr>
+                                        <tr>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                        </tr>
+                                        <tr>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                        </tr>
+                                        <tr>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                        </tr>
+                                        <tr>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                        </tr>
+                                        <tr>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                        </tr>
+                                        <tr>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                        </tr>
+                                        <tr>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                        </tr>
+                                        <tr>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                        </tr>
+                                        <tr>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                        </tr>
+                                        <tr>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                            <td>hola</td>
+                                        </tr>
+                                      
+                                    </tbody>
+                                    </table>
 
                                 <div class="d-flex justify-content-center">
-                                    <input onClick="mensaje(); reset()" type="button" value="Registrar Ticket" class="btn btn-primary mt-3"></input>
+                                    <input onClick="mensaje(); reset()" type="button" value="Registrar Cliente" class="btn btn-primary mt-3"></input>
                                 </div>
                             </form>
 
