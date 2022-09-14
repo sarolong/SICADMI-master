@@ -4,7 +4,7 @@ session_start();
 $usuario=$_POST['usuario'];
 $pass=$_POST['password'];
 
-$query="SELECT A.* FROM tbl_admin AS A WHERE A.Usuario='$usuario' AND A.Password='$pass'";
+$query="SELECT Nombre_Usuario, password_Usuario FROM tbl_usuarios AS A WHERE Nombre_Usuario='$usuario' AND password_Usuario='$pass'";
 $q=mysqli_query($con,$query);
 $array=mysqli_fetch_row($q);
 

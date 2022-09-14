@@ -10,18 +10,6 @@ body{
     font-family: 'Roboto',Arial, Helvetica, sans-serif;
 }
 
-/*FORMULARIO REGISTRO*/
-
-.body-form{
-    background-color: #E7F6F2;
-}
-div .col-form form{
-    width: 450px;
-    
-}
-.col-form form .botones{
-    text-align: center;
-}
 /*FORMULARIO INICIO DE SESION*/
 
 div img{
@@ -51,7 +39,7 @@ div .icon-user {
     font-size: 30px;
     color: #293462;
 }
-@media (min-width:650px){
+@media (max-width:650px){
     div img{
         width: 950px;
     }

@@ -1,4 +1,4 @@
 <?php
-$con= mysqli_connect("localhost", "root", "", "sicadmin");
+$con= mysqli_connect("localhost", "root", "", "dbs_sicadmi");
 
 ?>
