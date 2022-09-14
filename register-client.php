@@ -348,18 +348,18 @@
                             </div>
                             <form id="ticket">
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" aria-label="Identificacion" aria-describedby="basic-addon1">
                                     <span class="input-group-text w-25 d-inline" id="basic-addon2">Identificacion</span>
+                                    <input type="text" class="form-control" aria-label="Identificacion" aria-describedby="basic-addon1">
                                 </div>
 
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" aria-label="Nombres" aria-describedby="basic-addon2">
                                     <span class="input-group-text w-25 d-inline" id="basic-addon2">Nombres</span>
+                                    <input type="text" class="form-control" aria-label="Nombres" aria-describedby="basic-addon2">
                                 </div>
 
                                 <div class="input-group mb-3">
+                                    <span  span class="input-group-text w-25 d-inline" id="basic-addon2">Apellidos</span>
                                     <input type="text" class="form-control" aria-label="Apellidos" aria-describedby="basic-addon2">
-                                    <span class="input-group-text w-25 d-inline" id="basic-addon2">Apellidos</span>
                                 </div>
 
                                 <div class="input-group mb-4">
@@ -369,18 +369,18 @@
                                 </div>
 
                                 <div class="input-group mb-3">
-                                    <input type="email" class="form-control" aria-label="Correo" aria-describedby="basic-addon2">
                                     <span class="input-group-text w-25 d-inline" id="basic-addon2">Correo</span>
+                                    <input type="email" class="form-control" aria-label="Correo" aria-describedby="basic-addon2">
                                 </div>
 
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" aria-label="Direccion" aria-describedby="basic-addon2">
                                     <span class="input-group-text w-25 d-inline" id="basic-addon2">Direccion</span>
+                                    <input type="text" class="form-control" aria-label="Direccion" aria-describedby="basic-addon2">
                                 </div>
 
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" aria-label="Telefono" aria-describedby="basic-addon2">
                                     <span class="input-group-text w-25 d-inline" id="basic-addon2">Telefono</span>
+                                    <input type="text" class="form-control" aria-label="Telefono" aria-describedby="basic-addon2">
                                 </div>
 
                                 <div class="d-flex justify-content-center">
