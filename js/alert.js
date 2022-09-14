@@ -1,12 +1,11 @@
 
-function mensaje() {
+function Exito(mensaje) {
 
-    swal({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Registro Exitoso',
-        showConfirmButton: false,
-    });
+    Swal.fire(
+         mensaje,
+        'Presione OK!',
+        'success'
+      )
   }
 
   function mensajeClave() {
@@ -22,4 +21,13 @@ function mensaje() {
   function reset(){
       document.getElementsById("user").reset();
       document.getElementsById("ticket").reset();
+  }
+
+  function Falla(mensaje){
+    Swal.fire({
+        icon: 'error',
+        title: 'Error...',
+        text: mensaje,
+        
+      })
   }

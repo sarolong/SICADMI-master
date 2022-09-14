@@ -10,6 +10,12 @@
     <meta name="author" content="">
 
     <title>Clients</title>
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <!--SweetAlert2-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -23,11 +29,11 @@
 
 <body id="page-top">
     <?php
-    session_start();
+    /*session_start();
     $usuario = $_SESSION['Usuario'];
     if (!isset($usuario)) {
         header('location: LoginPagi.php');
-    }
+    }*/
     ?>
 
     <!-- Page Wrapper -->
@@ -363,28 +369,31 @@
                                 </div>
 
                                 <div class="input-group mb-4">
-                                    <label for="genero" class="d-flex align-items-center my-0">Genero</label>
-                                    <span class="input-group-text mx-3" id="basic-addon2">M<input type="radio" class="mx-3"></span>
-                                    <span class="input-group-text" id="basic-addon2">F<input type="radio" class="mx-3"></span>
+                                    <span class="input-group-text w-25 d-inline" id="basic-addon2">Genero</span>
+                                    <select class="form-select" id="Genero" aria-label="Default select example" required>
+                                        <option selected>Seleccione Genero...</option>
+                                        <option value="M">Masculino</option>
+                                        <option value="F">Femenino</option>
+                                    </select>
                                 </div>
 
                                 <div class="input-group mb-3">
                                     <span class="input-group-text w-25 d-inline" id="basic-addon2">Correo</span>
-                                    <input type="email" class="form-control" aria-label="Correo" aria-describedby="basic-addon2">
+                                    <input type="email" id="Correo" class="form-control" aria-label="Correo" aria-describedby="basic-addon2" required>
                                 </div>
 
                                 <div class="input-group mb-3">
                                     <span class="input-group-text w-25 d-inline" id="basic-addon2">Direccion</span>
-                                    <input type="text" class="form-control" aria-label="Direccion" aria-describedby="basic-addon2">
+                                    <input type="text" id="Direccion" class="form-control" aria-label="Direccion" aria-describedby="basic-addon2" required>
                                 </div>
 
                                 <div class="input-group mb-3">
                                     <span class="input-group-text w-25 d-inline" id="basic-addon2">Telefono</span>
-                                    <input type="text" class="form-control" aria-label="Telefono" aria-describedby="basic-addon2">
+                                    <input type="text" id="Telefono" class="form-control" aria-label="Telefono" aria-describedby="basic-addon2" required>
                                 </div>
 
                                 <div class="d-flex justify-content-center">
-                                    <input onClick="mensaje(); reset()" type="button" value="Registrar Cliente" class="btn btn-primary mt-3"></input>
+                                    <button type="button" class="btn btn-primary mt-3" id="btnRegistrar">Registrar Cliente</button>
                                 </div>
                             </form>
 
@@ -440,8 +449,9 @@
         </div>
 
 
-
-        <script src="js/alert.js"></script>
+        <script src="./js/proceso.js"></script>
+        <script src="./js/alert.js"></script>
+        </script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <!-- Bootstrap core JavaScript-->
         <script src="vendor/jquery/jquery.min.js"></script>
