@@ -29,6 +29,7 @@
         header('location: LoginPagi.php');
     }
     ?>
+    
 
     <!-- Page Wrapper -->
     <div id="wrapper">
