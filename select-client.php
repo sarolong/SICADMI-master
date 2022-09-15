@@ -352,7 +352,7 @@
                                     <input type="text" class="form-control" aria-label="Identificacion" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="d-flex justify-content-center">
-                                    <button onClick="mensaje(); reset()" type="button" class="btn btn-primary">Buscar</button>
+                                    <button onClick="mensaje(); reset()" type="button" class="btn btn-primary" id="consultar">Buscar</button>
                                 </div>   
                                 <table class="table table-striped table-bordered table-hover mt-5">
                                     <thead>

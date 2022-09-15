@@ -9,7 +9,7 @@
     $Direccion=$_POST["Direccion"];
     $Telefono=$_POST["Telefono"];
 
-    $Q="SELECT * FROM tbl_clientes WHERE PK_Identificacion = $Identificacion";
+    $Q="SELECT * FROM tbl_clientes WHERE PK_Id_Cliente = $Identificacion";
     $C=mysqli_query($con,$Q);
     if($row=mysqli_fetch_row($C)>0){
         echo "Existente";

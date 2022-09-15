@@ -13,9 +13,9 @@ $("#btnRegistrar").on("click",function() {
         data: {Identificacion: Identificacion, Nombres: Nombres, Apellidos: Apellidos, Genero: Genero, Correo: Correo, Direccion: Direccion, Telefono: Telefono}
     }).done(function(data){
         if(data=="Exito"){
-            Exito("Usuario Registrado");
+            Exito("Cliente Registrado");
         }else if(data=="Existente"){
-            Falla("Usuario ya Registrado");
+            Falla("Cliente ya Registrado");
         }
     })
     document.getElementById('ticket').reset();

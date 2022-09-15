@@ -29,11 +29,11 @@
 
 <body id="page-top">
     <?php
-    /*session_start();
+    session_start();
     $usuario = $_SESSION['Usuario'];
     if (!isset($usuario)) {
         header('location: LoginPagi.php');
-    }*/
+    }
     ?>
 
     <!-- Page Wrapper -->
@@ -355,17 +355,17 @@
                             <form id="ticket">
                                 <div class="input-group mb-3">
                                     <span class="input-group-text w-25 d-inline" id="basic-addon2">Identificacion</span>
-                                    <input type="text" class="form-control" aria-label="Identificacion" aria-describedby="basic-addon1">
+                                    <input type="text" id="Identificacion" class="form-control" aria-label="Identificacion" aria-describedby="basic-addon1" required>
                                 </div>
 
                                 <div class="input-group mb-3">
                                     <span class="input-group-text w-25 d-inline" id="basic-addon2">Nombres</span>
-                                    <input type="text" class="form-control" aria-label="Nombres" aria-describedby="basic-addon2">
+                                    <input type="text" id="Nombres" class="form-control" aria-label="Nombres" aria-describedby="basic-addon2" required>
                                 </div>
 
                                 <div class="input-group mb-3">
                                     <span  span class="input-group-text w-25 d-inline" id="basic-addon2">Apellidos</span>
-                                    <input type="text" class="form-control" aria-label="Apellidos" aria-describedby="basic-addon2">
+                                    <input type="text" id="Apellidos" class="form-control" aria-label="Apellidos" aria-describedby="basic-addon2" required>
                                 </div>
 
                                 <div class="input-group mb-4">
