@@ -17,6 +17,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
 
 </head>
@@ -349,165 +350,48 @@
                             <form id="ticket">
                                 <div class="input-group mb-3">
                                     <span class="input-group-text w-25 d-inline" id="basic-addon2">Identificacion</span>
-                                    <input type="text" class="form-control" aria-label="Identificacion" aria-describedby="basic-addon1">
+                                    <input type="text" class="form-control" id="Identificacion" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="d-flex justify-content-center">
-                                    <button onClick="mensaje(); reset()" type="button" class="btn btn-primary" id="consultar">Buscar</button>
-                                </div>   
-                                <table class="table table-striped table-bordered table-hover mt-5">
-                                    <thead>
-                                        <tr>
-                                        <th scope="col">Id</th>
-                                        <th scope="col">No Documento</th>
-                                        <th scope="col">Nombres</th>
-                                        <th scope="col">Apellidos</th>
-                                        <th scope="col">Genero</th>
-                                        <th scope="col">Correo</th>
-                                        <th scope="col">Direccion</th>
-                                        <th scope="col">Telefono</th>
-                                        <th scope="col">Opciones</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                        </tr>
-                                        <tr>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                        </tr>
-                                        <tr>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                        </tr>
-                                        <tr>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                        </tr>
-                                        <tr>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                        </tr>
-                                        <tr>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                        </tr>
-                                        <tr>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                        </tr>
-                                        <tr>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                        </tr>
-                                        <tr>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                        </tr>
-                                        <tr>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                        </tr>
-                                        <tr>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                            <td>hola</td>
-                                        </tr>
-                                      
-                                    </tbody>
+                                    <button onClick="mensaje(); reset();" type="button" class="btn btn-primary" id="consultar">Buscar</button>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <table class="table table-striped table-bordered table-hover mt-5 text-center">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">No Documento</th>
+                                                <th scope="col">Nombres</th>
+                                                <th scope="col">Apellidos</th>
+                                                <th scope="col">Genero</th>
+                                                <th scope="col">Correo</th>
+                                                <th scope="col">Direccion</th>
+                                                <th scope="col">Telefono</th>
+                                                <th scope="col">Opciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="myTable">
+        
+                                        </tbody>
                                     </table>
+                                </div>
                             </form>
-
-
                         </div>
-
                         <!-- Content Row -->
-
                     </div>
                     <!-- /.container-fluid -->
-
                 </div>
                 <!-- End of Main Content -->
-
-                <!-- Footer -->
-                <footer class="sticky-footer bg-white">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; SICADMI 2022</span>
-                        </div>
-                    </div>
-                </footer>
-                <!-- End of Footer -->
-
             </div>
             <!-- End of Content Wrapper -->
-
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; SICADMI 2022</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
         </div>
         <!-- End of Page Wrapper -->
 
@@ -537,7 +421,8 @@
 
 
 
-        <script src="js/alert.js"></script>
+        <script src="./js/proceso.js"></script>
+        <script src="./js/alert.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <!-- Bootstrap core JavaScript-->
         <script src="vendor/jquery/jquery.min.js"></script>

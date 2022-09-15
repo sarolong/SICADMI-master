@@ -472,7 +472,7 @@
                                 </div>
 
                                 <div class="d-flex justify-content-center">
-                                    <input onClick="mensaje(); reset()" type="button" value="Registrar Ticket" class="btn btn-primary mt-3"></input>
+                                    <input onClick="mensaje(); reset()" type="button" value="Registrar Ticket" class="btn btn-primary mt-3">
                                 </div>
                             </form>
 
@@ -487,8 +487,10 @@
                 </div>
                 <!-- End of Main Content -->
 
-                <!-- Footer -->
-                <footer class="sticky-footer bg-white">
+            </div>
+            <!-- End of Content Wrapper -->
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
                     <div class="container my-auto">
                         <div class="copyright text-center my-auto">
                             <span>Copyright &copy; SICADMI 2022</span>
@@ -496,10 +498,6 @@
                     </div>
                 </footer>
                 <!-- End of Footer -->
-
-            </div>
-            <!-- End of Content Wrapper -->
-
         </div>
         <!-- End of Page Wrapper -->
 
