@@ -10,6 +10,11 @@
     <meta name="author" content="">
 
     <title>Select</title>
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <!--SweetAlert2-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -22,7 +27,7 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" >
     <?php
     session_start();
     $usuario = $_SESSION['Usuario'];
@@ -158,7 +163,7 @@
                     <!-- Topbar Search -->
                     <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar..." aria-label="Search" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control bg-light border-0 small"  placeholder="Buscar..." aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
@@ -350,7 +355,7 @@
                             <form id="ticket">
                                 <div class="input-group mb-3">
                                     <span class="input-group-text w-25 d-inline" id="basic-addon2">Identificacion</span>
-                                    <input type="text" class="form-control" id="Identificacion" aria-describedby="basic-addon1">
+                                    <input type="search" placeholder="Buscar" class="form-control" id="BuscarID" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="d-flex justify-content-center">
                                     <button onClick="mensaje(); reset();" type="button" class="btn btn-primary" id="consultar">Buscar</button>
@@ -381,6 +386,87 @@
                     <!-- /.container-fluid -->
                 </div>
                 <!-- End of Main Content -->
+            </div>
+            <!-- Modal Editar CLiente-->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content" style="width: 400px;">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="exampleModalLabel">Informacion Personal</h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body m-0 row justify-content-center">
+
+                            <div class="col-12">
+                                <form>
+
+                                    <div class="row g-3 mb-3 align-items-center">
+                                        <div class="col-4">
+                                            <label class="col-form-label">Identificacion</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <input type="text" readonly="readonly" id="MIdentificacion" class="form-control  text-center">
+                                        </div>
+                                    </div>
+                                    <div class="row g-3 mb-3 align-items-center">
+                                        <div class="col-4">
+                                            <label class="col-form-label">Nombres</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <input type="text" id="MNombres" class="form-control  text-center">
+                                        </div>
+                                    </div>
+                                    <div class="row g-3 mb-3 align-items-center">
+                                        <div class="col-4">
+                                            <label class="col-form-label">Apellidos</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <input type="text" id="MApellidos" class="form-control  text-center">
+                                        </div>
+                                    </div>
+                                    <div class="row g-3 mb-3 align-items-center">
+                                        <div class="col-4">
+                                            <label class="col-form-label">Correo</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <input type="text" id="MCorreo" class="form-control  text-center">
+                                        </div>
+                                    </div>
+                                    <div class="row g-3 mb-3 align-items-center">
+                                        <div class="col-4">
+                                            <label class="col-form-label">Genero</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <input type="text" id="MGenero" class="form-control  text-center">
+                                        </div>
+                                    </div>
+                                    <div class="row g-3 mb-3 align-items-center">
+                                        <div class="col-4">
+                                            <label class="col-form-label">Direccion</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <input class="form-control text-center" type="text" id="MDireccion">
+                                        </div>
+                                    </div>
+                                    <div class="row g-3 mb-3 align-items-center">
+                                        <div class="col-4">
+                                            <label class="col-form-label">Telefono</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <input type="text" id="MTelefono" class="form-control text-center">
+                                        </div>
+                                    </div>
+                                 
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="A btn btn-primary" data-bs-dismiss="modal" type="button" id="Editar">Actualizar</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- End of Content Wrapper -->
             <!-- Footer -->
@@ -420,9 +506,13 @@
         </div>
 
 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
 
         <script src="./js/proceso.js"></script>
         <script src="./js/alert.js"></script>
+        
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <!-- Bootstrap core JavaScript-->
         <script src="vendor/jquery/jquery.min.js"></script>

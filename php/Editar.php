@@ -9,11 +9,11 @@
     $Direccion=$_POST['Direccion'];
     $Telefono=$_POST['Telefono'];
 
-    $Query="UPDATE tbl_clientes SET Identificacion=$Identificacion,Nombres='$Nombres',Apellidos='$Apellidos',
-                                Genero='$Genero',Direccion='$Direccion',Telefono='$Telefono' WHERE Identificacion=$Identificacion";
+    $Query="UPDATE tbl_clientes SET Nombres='$Nombres',Apellidos='$Apellidos',
+                                Genero='$Genero',Direccion='$Direccion',Telefono='$Telefono' WHERE PK_Id_Cliente=$Identificacion";
     $consulta=mysqli_query($con,$Query);
 
     if($consulta){
-        echo "Exitoso";
+        echo "Exito";
     }
 ?>
