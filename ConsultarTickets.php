@@ -9,13 +9,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clients</title>
+    <title>Select</title>
     <!--JQuery-->
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <!--SweetAlert2-->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -23,11 +22,13 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
 
 </head>
 
-<body id="page-top">
+<body id="page-top" >
+ 
     <?php
     session_start();
     $usuario = $_SESSION['Usuario'];
@@ -89,8 +90,8 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Utilidades:</h6>
-                        <a class="collapse-item" href="#">Registrar Ticket</a>
-                        <a class="collapse-item" href="ConsultarTickets.php">Consultar Tickets</a>
+                        <a class="collapse-item" href="register-case.php">Registrar Ticket</a>
+                        <a class="collapse-item" href="select-case.php">Consultar Tickets</a>
                         <a class="collapse-item" href="register-client.php">Registrar Clientes</a>
                         <a class="collapse-item" href="select-client.php">Consultar Clientes</a>
                     </div>
@@ -163,7 +164,7 @@
                     <!-- Topbar Search -->
                     <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar..." aria-label="Search" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control bg-light border-0 small"  placeholder="Buscar..." aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
@@ -341,7 +342,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard - Clients</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Dashboard - Querys</h1>
                     </div>
 
                     <!-- DASCHBOARD -->
@@ -351,74 +352,133 @@
                         <!-- Area registro -->
                         <div class="col-lg-8 mb-4 px-0">
                             <div class="card-header py-3 text-center">
-                                <h3 class="m-0 font-weight-bold text-primary">Registrar Clientes</h3>
+                                <h3 class="m-0 font-weight-bold text-primary">Consultar Tickets</h3>
                             </div>
                             <form id="ticket">
                                 <div class="input-group mb-3">
                                     <span class="input-group-text w-25 d-inline" id="basic-addon2">Identificacion</span>
-                                    <input type="text" id="Identificacion" class="form-control" aria-label="Identificacion" aria-describedby="basic-addon1" required>
+                                    <input type="text" placeholder="Buscar" class="form-control" id="BuscarIDCases" aria-describedby="basic-addon1">
+                               
                                 </div>
-
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text w-25 d-inline" id="basic-addon2">Nombres</span>
-                                    <input type="text" id="Nombres" class="form-control" aria-label="Nombres" aria-describedby="basic-addon2" required>
-                                </div>
-
-                                <div class="input-group mb-3">
-                                    <span  span class="input-group-text w-25 d-inline" id="basic-addon2">Apellidos</span>
-                                    <input type="text" id="Apellidos" class="form-control" aria-label="Apellidos" aria-describedby="basic-addon2" required>
-                                </div>
-
-                                <div class="input-group mb-4">
-                                    <span class="input-group-text w-25 d-inline" id="basic-addon2">Genero</span>
-                                    <select class="form-select" id="Genero" aria-label="Default select example" required>
-                                        <option selected>Seleccione Genero...</option>
-                                        <option value="M">Masculino</option>
-                                        <option value="F">Femenino</option>
-                                    </select>
-                                </div>
-
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text w-25 d-inline" id="basic-addon2">Correo</span>
-                                    <input type="email" id="Correo" class="form-control" aria-label="Correo" aria-describedby="basic-addon2" required>
-                                </div>
-
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text w-25 d-inline" id="basic-addon2">Direccion</span>
-                                    <input type="text" id="Direccion" class="form-control" aria-label="Direccion" aria-describedby="basic-addon2" required>
-                                </div>
-
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text w-25 d-inline" id="basic-addon2">Telefono</span>
-                                    <input type="text" id="Telefono" class="form-control" aria-label="Telefono" aria-describedby="basic-addon2" required>
-                                </div>
-
+                               
                                 <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-primary mt-3" id="btnRegistrar">Registrar Cliente</button>
+                                    <table class="table table-striped table-bordered table-hover mt-5 text-center">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Id Ticket</th>
+                                                <th scope="col">Descripcion</th>
+                                                <th scope="col">FechaInicio</th>
+                                                <th scope="col">FechaFinal</th>
+                                                <th scope="col">Estado</th>
+                                                <th scope="col">Cliente</th>
+                                                <th scope="col">Observacion</th>
+                                                <th scope="col">Factura</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="TablaCases">
+        
+                                        </tbody>
+                                    </table>
                                 </div>
                             </form>
-
-
                         </div>
-
                         <!-- Content Row -->
-
                     </div>
                     <!-- /.container-fluid -->
-
                 </div>
                 <!-- End of Main Content -->
             </div>
-            <!-- End of Content Wrapper -->
-                <!-- Footer -->
-                <footer class="sticky-footer bg-white">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; SICADMI 2022</span>
+            <!-- Modal Editar CLiente-->
+            <div class="modal fade" id="ModalTickets" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content" style="width: 400px;">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="exampleModalLabel">Informacion Personal</h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body m-0 row justify-content-center">
+
+                            <div class="col-12">
+                                <form>
+
+                                    <div class="row g-3 mb-3 align-items-center">
+                                        <div class="col-4">
+                                            <label class="col-form-label">Id Tickets</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <input type="text" readonly="readonly" id="MIdTicket" class="form-control  text-center">
+                                        </div>
+                                    </div>
+                                    <div class="row g-3 mb-3 align-items-center">
+                                        <div class="col-4">
+                                            <label class="col-form-label">Descripcion</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <input type="text" id="MDescripcion" class="form-control  text-center">
+                                        </div>
+                                    </div>
+                                    <div class="row g-3 mb-3 align-items-center">
+                                        <div class="col-4">
+                                            <label class="col-form-label">Fecha Inicio</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <input type="text" id="MFechaI" class="form-control  text-center">
+                                        </div>
+                                    </div>
+                                    <div class="row g-3 mb-3 align-items-center">
+                                        <div class="col-4">
+                                            <label class="col-form-label">Fecha Final</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <input type="text" id="MFechaF" class="form-control  text-center">
+                                        </div>
+                                    </div>
+                                    <div class="row g-3 mb-3 align-items-center">
+                                        <div class="col-4">
+                                            <label class="col-form-label">Estado</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <input type="text" id="MEstado" class="form-control  text-center">
+                                        </div>
+                                    </div>
+                                    <div class="row g-3 mb-3 align-items-center">
+                                        <div class="col-4">
+                                            <label class="col-form-label">Cliente</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <input class="form-control text-center" type="text" id="MCliente">
+                                        </div>
+                                    </div>
+                                    <div class="row g-3 mb-3 align-items-center">
+                                        <div class="col-4">
+                                            <label class="col-form-label">Observacion</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <input type="text" id="MObservacion" class="form-control text-center">
+                                        </div>
+                                    </div>
+                                 
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="A btn btn-primary" data-bs-dismiss="modal" type="button" id="Editar">Actualizar</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
-                </footer>
-                <!-- End of Footer -->
+                </div>
+            </div>
+            <!-- End of Content Wrapper -->
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; SICADMI 2022</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
         </div>
         <!-- End of Page Wrapper -->
 
@@ -447,9 +507,16 @@
         </div>
 
 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
         <script src="./js/proceso.js"></script>
         <script src="./js/alert.js"></script>
+        <script>
+        setInterval(MCase(''),1000);
         </script>
+        
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <!-- Bootstrap core JavaScript-->
         <script src="vendor/jquery/jquery.min.js"></script>

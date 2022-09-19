@@ -21,6 +21,8 @@ $("#btnRegistrar").on("click", function () {
     document.getElementById('ticket').reset();
 });
 
+
+
 function Mostrar(Letra) {
     var tabla = $.ajax({
         url: './php/MostrarTabla.php',
@@ -31,11 +33,22 @@ function Mostrar(Letra) {
     }).responseText;
     document.getElementById('myTable').innerHTML = tabla;
 }
-setInterval(Mostrar(''),1000);
-
-$('#BuscarID').keyup(function() {
+function MCase(ID){
+    var tablas = $.ajax({
+        url: './php/TablaCases.php',
+        type: 'POST',
+        datatype: 'text',
+        data:{ID:ID},
+        async: false,
+    }).responseText;
+    document.getElementById('TablaCases').innerHTML = tablas;
+}
+$('#BuscarID').on("keyup",(function() {
     Mostrar(document.getElementById('BuscarID').value);
-})
+}))
+$('#BuscarIDCases').on("keyup",(function() {
+    MCase(document.getElementById('BuscarIDCases').value);
+}))
 
 function Consultar(Identificacion) {
 
@@ -52,6 +65,25 @@ function Consultar(Identificacion) {
         document.getElementById('MCorreo').value = Json[0].Correo;
         document.getElementById('MDireccion').value = Json[0].Direccion;
         document.getElementById('MTelefono').value = Json[0].Telefono;
+
+    });
+}
+
+function Factura(Identificacion) {
+
+    $.ajax({
+        url: './php/Factura.php',
+        type: 'POST',
+        data: { Identificacion: Identificacion }
+    }).done(function (respuesta) {
+        var JsonF = JSON.parse(respuesta);
+        document.getElementById('MIdTicket').value = JsonF[0].Id;
+        document.getElementById('MDescripcion').value = JsonF[0].Des;
+        document.getElementById('MFechaI').value = JsonF[0].FI;
+        document.getElementById('MFechaF').value = JsonF[0].FF;
+        document.getElementById('MEstado').value = JsonF[0].Estado;
+        document.getElementById('MCliente').value = JsonF[0].Cl;
+        document.getElementById('MObservacion').value = JsonF[0].Obs;
 
     });
 }
