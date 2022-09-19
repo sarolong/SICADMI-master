@@ -13,11 +13,19 @@
     <title>SICADMI - Dashboard</title>
 
     <!-- Custom fonts for this template-->
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <!--SweetAlert2-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
 
 </head>
@@ -350,7 +358,7 @@
                             </div>
                         <form id="tickets">
                             <div class="input-group mb-3">
-                                    <select class="form-control w-50" name="menu-servicio" id="menu-servicio">
+                                    <select class="form-control w-50" name="Menu" id="Menu">
                                         <option value="">Seleccione el servicio:</option>
                                         <?php
                                         include "../SICADMI-master/php/conexion.php";
@@ -366,17 +374,17 @@
                                     <input type="text" class="form-control input-group-text" placeholder="Seleccione el servicio" aria-label="Text input with radio button">
                                 </div>
                                 <div class="input-group mb-3">
-                                    <input type="date" class="form-control" id="FechaInicio" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="date" class="form-control" id="Fecha_i" aria-label="Username" aria-describedby="basic-addon1">
                                     <span class="input-group-text w-50 d-inline" id="basic-addon2">Fecha Inicial</span>
                                 </div>
 
                                 <div class="input-group mb-3">
-                                    <input type="date" class="form-control" id="FechaFinal" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <input type="date" class="form-control" id="Fecha_f" aria-label="Recipient's username" aria-describedby="basic-addon2">
                                     <span class="input-group-text  w-50 d-inline" id="basic-addon2">Fecha Final</span>
                                 </div>
                             
                                 <div class="input-group mb-3">
-                                    <select class="form-control w-50" name="menu-estado" id="menu-estado">
+                                    <select class="form-control w-50" name="Menu_estado" id="Menu_estado">
                                     <option value="">Seleccion el Estado: </option>
                                             <?php
                                             include "../SICADMI-master/php/conexion.php";
@@ -391,7 +399,7 @@
                                     <input type="text" class="form-control input-group-text" placeholder="Estado del caso" aria-label="Text input with radio button">
                                 </div>
                                 <div class="input-group mb-3">
-                                    <select class="form-control w-50" name="menu-cliente" id="menu-cliente">
+                                    <select class="form-control w-50" name="Menu_cliente" id="Menu_cliente">
                                             <option value="">Seleccion el cliente: </option>
                                             <?php
                                             include "../SICADMI-master/php/conexion.php";
@@ -410,7 +418,7 @@
                                     <span class="input-group-text d-inline">Observaciones</span>
                                 </div>
                                 <div class="d-flex justify-content-center mt-4">
-                                    <button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
+                                    <button type="button" class="btn btn-primary" id="Guardar">Guardar</button>
                                 </div>
                             </form>
 
@@ -465,8 +473,13 @@
 
 
 
-        <script src="./js/alert.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
         <script src="./js/proceso.js"></script>
+        <script src="./js/alert.js"></script>
+        
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <!-- Bootstrap core JavaScript-->
         <script src="vendor/jquery/jquery.min.js"></script>
