@@ -89,8 +89,8 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Utilidades:</h6>
-                        <a class="collapse-item" href="#">Registrar Incidente</a>
-                        <a class="collapse-item" href="#">Consultar Casos</a>
+                        <a class="collapse-item" href="#">Registrar Ticket</a>
+                        <a class="collapse-item" href="#">Consultar Tickets</a>
                         <a class="collapse-item" href="register-client.php">Registrar Clientes</a>
                         <a class="collapse-item" href="select-client.php">Consultar Clientes</a>
                     </div>
@@ -305,6 +305,7 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo "Bienvenido a <strong>SICADMI</strong> | " ?></span>
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $usuario ?></span>
                                 <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>

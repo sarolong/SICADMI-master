@@ -110,5 +110,3 @@ $('#Editar').on("click", function () {
 
     });
 })
-
- 

@@ -8,13 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
-    <title>Select</title>
-    <!--JQuery-->
-    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <!--SweetAlert2-->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>SICADMI - Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -22,12 +18,11 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
 
 </head>
 
-<body id="page-top" >
+<body id="page-top">
     <?php
     session_start();
     $usuario = $_SESSION['Usuario'];
@@ -35,6 +30,7 @@
         header('location: LoginPagi.php');
     }
     ?>
+    
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -114,9 +110,9 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Personalizados:</h6>
-                        <a class="collapse-item" href="#">Por Asignar</a>
-                        <a class="collapse-item" href="#">Por Asignar</a>
+                        <h6 class="collapse-header">Por asignar:</h6>
+                        <a class="collapse-item" href="">Por asignar:</a>
+                        <a class="collapse-item" href="">Por asignar</a>
                     </div>
                 </div>
             </li>
@@ -163,7 +159,7 @@
                     <!-- Topbar Search -->
                     <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small"  placeholder="Buscar..." aria-label="Search" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar..." aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
@@ -305,8 +301,8 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo "Bienvenido a <strong>SICADMI</strong> | " ?></span>
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $usuario ?></span>
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo "Bienvenido a <strong>SICADMI</strong> | " ?></span>    
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $usuario ?></span>
                                 <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
@@ -337,148 +333,109 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
+                <div class="container-fluid ms-0">
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard - Querys</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Dashboard - RegisterCase</h1>
+                        
                     </div>
-
-                    <!-- DASCHBOARD -->
 
                     <div class="row justify-content-center">
 
                         <!-- Area registro -->
                         <div class="col-lg-8 mb-4 px-0">
-                            <div class="card-header py-3 text-center">
-                                <h3 class="m-0 font-weight-bold text-primary">Consultar Clientes</h3>
+                            <div class="card-header py-3 text-center mb-5">
+                                <h3 class="m-0 font-weight-bold text-primary">Registrar Ticket</h3>
                             </div>
-                            <form id="ticket">
+                        <form id="tickets">
+                            <div class="input-group mb-3">
+                                    <select class="form-control w-50" name="menu-servicio" id="menu-servicio">
+                                        <option value="">Seleccione el servicio:</option>
+                                        <?php
+                                        include "../SICADMI-master/php/conexion.php";
+                                        $query = mysqli_query($con,"SELECT * FROM tbl_servicios");
+                                        ?> 
+                                        <?php
+                                        while ($valores = mysqli_fetch_array($query)) {
+                                            ?>
+                                            <option value=""><?php echo $valores['PK_Id_Servicio']?> - <?php echo $valores['Nombre_Servicio']?> - <?php echo $valores['Descripcion']?></option>
+                                        <?php } ?>  
+                                    </select>
+
+                                    <input type="text" class="form-control input-group-text" placeholder="Seleccione el servicio" aria-label="Text input with radio button">
+                                </div>
                                 <div class="input-group mb-3">
-                                    <span class="input-group-text w-25 d-inline" id="basic-addon2">Identificacion</span>
-                                    <input type="search" placeholder="Buscar" class="form-control" id="BuscarID" aria-describedby="basic-addon1">
+                                    <input type="date" class="form-control" id="FechaInicio" aria-label="Username" aria-describedby="basic-addon1">
+                                    <span class="input-group-text w-50 d-inline" id="basic-addon2">Fecha Inicial</span>
                                 </div>
-                                <div class="d-flex justify-content-center">
-                                    <button onClick="mensaje(); reset();" type="button" class="btn btn-primary" id="consultar">Buscar</button>
+
+                                <div class="input-group mb-3">
+                                    <input type="date" class="form-control" id="FechaFinal" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <span class="input-group-text  w-50 d-inline" id="basic-addon2">Fecha Final</span>
                                 </div>
-                                <div class="d-flex justify-content-center">
-                                    <table class="table table-striped table-bordered table-hover mt-5 text-center">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">No Documento</th>
-                                                <th scope="col">Nombres</th>
-                                                <th scope="col">Apellidos</th>
-                                                <th scope="col">Genero</th>
-                                                <th scope="col">Correo</th>
-                                                <th scope="col">Direccion</th>
-                                                <th scope="col">Telefono</th>
-                                                <th scope="col">Opciones</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="myTable">
-        
-                                        </tbody>
-                                    </table>
+                            
+                                <div class="input-group mb-3">
+                                    <select class="form-control w-50" name="menu-estado" id="menu-estado">
+                                    <option value="">Seleccion el Estado: </option>
+                                            <?php
+                                            include "../SICADMI-master/php/conexion.php";
+                                            $query = mysqli_query($con,"SELECT * FROM tbl_estado");
+                                            ?> 
+                                            <?php
+                                            while ($datos = mysqli_fetch_array($query)) {
+                                            ?>
+                                            <option value=""><?php echo $datos['Nombre_Estado']?> | <?php echo $datos['Descripcion']?></option>
+                                        <?php } ?> 
+                                    </select>
+                                    <input type="text" class="form-control input-group-text" placeholder="Estado del caso" aria-label="Text input with radio button">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <select class="form-control w-50" name="menu-cliente" id="menu-cliente">
+                                            <option value="">Seleccion el cliente: </option>
+                                            <?php
+                                            include "../SICADMI-master/php/conexion.php";
+                                            $query = mysqli_query($con,"SELECT * FROM tbl_clientes");
+                                            ?> 
+                                            <?php
+                                            while ($datos = mysqli_fetch_array($query)) {
+                                            ?>
+                                            <option value=""><?php echo $datos['Nombres']?><?php echo " "?><?php echo $datos['Apellidos']?></option>
+                                        <?php } ?> 
+                                    </select>
+                                    <input type="text" class="form-control input-group-text" placeholder="Seleccione el cliente" aria-label="Text input with radio button">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <textarea class="form-control" id="Observacion" aria-label="With textarea"></textarea>
+                                    <span class="input-group-text d-inline">Observaciones</span>
+                                </div>
+                                <div class="d-flex justify-content-center mt-4">
+                                    <button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
                                 </div>
                             </form>
+
+
                         </div>
+
                         <!-- Content Row -->
+
                     </div>
                     <!-- /.container-fluid -->
+
                 </div>
                 <!-- End of Main Content -->
-            </div>
-            <!-- Modal Editar CLiente-->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content" style="width: 400px;">
-                        <div class="modal-header">
-                            <h3 class="modal-title" id="exampleModalLabel">Informacion Personal</h3>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body m-0 row justify-content-center">
 
-                            <div class="col-12">
-                                <form>
-
-                                    <div class="row g-3 mb-3 align-items-center">
-                                        <div class="col-4">
-                                            <label class="col-form-label">Identificacion</label>
-                                        </div>
-                                        <div class="col-8">
-                                            <input type="text" readonly="readonly" id="MIdentificacion" class="form-control  text-center">
-                                        </div>
-                                    </div>
-                                    <div class="row g-3 mb-3 align-items-center">
-                                        <div class="col-4">
-                                            <label class="col-form-label">Nombres</label>
-                                        </div>
-                                        <div class="col-8">
-                                            <input type="text" id="MNombres" class="form-control  text-center">
-                                        </div>
-                                    </div>
-                                    <div class="row g-3 mb-3 align-items-center">
-                                        <div class="col-4">
-                                            <label class="col-form-label">Apellidos</label>
-                                        </div>
-                                        <div class="col-8">
-                                            <input type="text" id="MApellidos" class="form-control  text-center">
-                                        </div>
-                                    </div>
-                                    <div class="row g-3 mb-3 align-items-center">
-                                        <div class="col-4">
-                                            <label class="col-form-label">Correo</label>
-                                        </div>
-                                        <div class="col-8">
-                                            <input type="text" id="MCorreo" class="form-control  text-center">
-                                        </div>
-                                    </div>
-                                    <div class="row g-3 mb-3 align-items-center">
-                                        <div class="col-4">
-                                            <label class="col-form-label">Genero</label>
-                                        </div>
-                                        <div class="col-8">
-                                            <input type="text" id="MGenero" class="form-control  text-center">
-                                        </div>
-                                    </div>
-                                    <div class="row g-3 mb-3 align-items-center">
-                                        <div class="col-4">
-                                            <label class="col-form-label">Direccion</label>
-                                        </div>
-                                        <div class="col-8">
-                                            <input class="form-control text-center" type="text" id="MDireccion">
-                                        </div>
-                                    </div>
-                                    <div class="row g-3 mb-3 align-items-center">
-                                        <div class="col-4">
-                                            <label class="col-form-label">Telefono</label>
-                                        </div>
-                                        <div class="col-8">
-                                            <input type="text" id="MTelefono" class="form-control text-center">
-                                        </div>
-                                    </div>
-                                 
-                                </form>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="A btn btn-primary" data-bs-dismiss="modal" type="button" id="Editar">Actualizar</button>
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
             </div>
             <!-- End of Content Wrapper -->
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; SICADMI 2022</span>
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright &copy; SICADMI 2022</span>
+                        </div>
                     </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
+                </footer>
+                <!-- End of Footer -->
         </div>
         <!-- End of Page Wrapper -->
 
@@ -507,13 +464,9 @@
         </div>
 
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
 
-        <script src="./js/proceso.js"></script>
         <script src="./js/alert.js"></script>
-        
+        <script src="./js/proceso.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <!-- Bootstrap core JavaScript-->
         <script src="vendor/jquery/jquery.min.js"></script>
