@@ -94,7 +94,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Utilidades:</h6>
                         <a class="collapse-item" href="register-case.php">Registrar Ticket</a>
-                        <a class="collapse-item" href="#">Consultar Tickets</a>
+                        <a class="collapse-item" href="ConsultarTickets.php">Consultar Tickets</a>
                         <a class="collapse-item" href="register-client.php">Registrar Clientes</a>
                         <a class="collapse-item" href="select-client.php">Consultar Clientes</a>
                     </div>

@@ -28,6 +28,7 @@
 </head>
 
 <body id="page-top" >
+    
     <?php
     session_start();
     $usuario = $_SESSION['Usuario'];
@@ -90,7 +91,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Utilidades:</h6>
                         <a class="collapse-item" href="register-case.php">Registrar Ticket</a>
-                        <a class="collapse-item" href="#">Consultar Tickets</a>
+                        <a class="collapse-item" href="ConsultarTickets.php">Consultar Tickets</a>
                         <a class="collapse-item" href="register-client.php">Registrar Clientes</a>
                         <a class="collapse-item" href="select-client.php">Consultar Clientes</a>
                     </div>
@@ -356,11 +357,9 @@
                             <form id="ticket">
                                 <div class="input-group mb-3">
                                     <span class="input-group-text w-25 d-inline" id="basic-addon2">Identificacion</span>
-                                    <input type="search" placeholder="Buscar" class="form-control" id="BuscarID" aria-describedby="basic-addon1">
+                                    <input type="text" placeholder="Buscar" class="form-control" id="BuscarID" aria-describedby="basic-addon1">
                                 </div>
-                                <div class="d-flex justify-content-center">
-                                    <button onClick="mensaje(); reset();" type="button" class="btn btn-primary" id="consultar">Buscar</button>
-                                </div>
+                               
                                 <div class="d-flex justify-content-center">
                                     <table class="table table-striped table-bordered table-hover mt-5 text-center">
                                         <thead>
@@ -513,7 +512,9 @@
 
         <script src="./js/proceso.js"></script>
         <script src="./js/alert.js"></script>
-        
+        <script>
+        setInterval(Mostrar(''),1000);
+        </script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <!-- Bootstrap core JavaScript-->
         <script src="vendor/jquery/jquery.min.js"></script>
