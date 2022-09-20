@@ -337,7 +337,7 @@
                             </div>
                         <form id="ticket">
                             <div class="input-group mb-3">
-                                    <select class="form-control w-50" name="Descripcion" id="Descripcion">
+                                    <select class="form-control w-50" name="menu-servicio" id="menu-servicio">
                                         <option value="">Seleccione el servicio:</option>
                                         <?php
                                         include "../SICADMI-master/php/conexion.php";
@@ -363,7 +363,7 @@
                                 </div>
                             
                                 <div class="input-group mb-3">
-                                    <select class="form-control w-50" name="Estado" id="Estado">
+                                    <select class="form-control w-50" name="menu-estado" id="menu-estado">
                                     <option value="">Seleccion el Estado: </option>
                                             <?php
                                             include "../SICADMI-master/php/conexion.php";
@@ -378,7 +378,7 @@
                                     <input type="text" class="form-control input-group-text" placeholder="Estado del caso" aria-label="Text input with radio button">
                                 </div>
                                 <div class="input-group mb-3">
-                                    <select class="form-control w-50" name="Cliente" id="Cliente">
+                                    <select class="form-control w-50" name="menu-cliente" id="menu-cliente">
                                             <option value="">Seleccion el cliente: </option>
                                             <?php
                                             include "../SICADMI-master/php/conexion.php";
@@ -397,7 +397,7 @@
                                     <span class="input-group-text d-inline">Observaciones</span>
                                 </div>
                                 <div class="d-flex justify-content-center mt-4">
-                                    <button class="btn btn-primary" id="btnGuardar">Enviar</button>
+                                    <button class="btn btn-primary" id="btnGuardar">Guardar</button>
                                 </div>
                             </form>
 
