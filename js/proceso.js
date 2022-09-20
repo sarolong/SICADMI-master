@@ -21,29 +21,6 @@ $("#btnRegistrar").on("click", function () {
     document.getElementById('ticket').reset();
 });
 
-$("#Guardar").on("click", function () {
-    var Menu = document.getElementById("Menu").value;
-    var Fecha_i = document.getElementById("Fecha_i").value;
-    var Fecha_f = document.getElementById("Fecha_f").value;
-    var Menu_estado = document.getElementById("Menu_estado").value;
-    var Menu_cliente = document.getElementById("Menu_cliente").value;
-    var Observacion = document.getElementById("Observacion").value;
-
-    $.ajax({
-        url: '../php/register_case.php',
-        type: 'POST',
-        data: { Menu: Menu, Fecha_i: Fecha_i, Fecha_f: Fecha_f, Menu_estado: Menu_estado, Menu_cliente: Menu_cliente, Observacion: Observacion }
-    }).done(function (dato) {
-        if (dato == "Exito") {
-            Exito("Ticket Registrado");
-        } else if (dato == "Existente") {
-            Falla("Ticket ya Registrado");
-        }
-        
-    })
-    document.getElementById('tickets').reset();
-});
-
 function Mostrar(Letra) {
     var tabla = $.ajax({
         url: './php/MostrarTabla.php',
@@ -54,6 +31,7 @@ function Mostrar(Letra) {
     }).responseText;
     document.getElementById('myTable').innerHTML = tabla;
 }
+
 function MCase(ID){
     var tablas = $.ajax({
         url: './php/TablaCases.php',
@@ -64,9 +42,11 @@ function MCase(ID){
     }).responseText;
     document.getElementById('TablaCases').innerHTML = tablas;
 }
+
 $('#BuscarID').on("keyup",(function() {
     Mostrar(document.getElementById('BuscarID').value);
 }))
+
 $('#BuscarIDCases').on("keyup",(function() {
     MCase(document.getElementById('BuscarIDCases').value);
 }))

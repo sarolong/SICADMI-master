@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
     <title>SICADMI - Dashboard</title>
 
@@ -356,9 +355,9 @@
                             <div class="card-header py-3 text-center mb-5">
                                 <h3 class="m-0 font-weight-bold text-primary">Registrar Ticket</h3>
                             </div>
-                        <form id="tickets">
+                        <form id="ticket">
                             <div class="input-group mb-3">
-                                    <select class="form-control w-50" name="Menu" id="Menu">
+                                    <select class="form-control w-50" name="Descripcion" id="Descripcion">
                                         <option value="">Seleccione el servicio:</option>
                                         <?php
                                         include "../SICADMI-master/php/conexion.php";
@@ -374,17 +373,17 @@
                                     <input type="text" class="form-control input-group-text" placeholder="Seleccione el servicio" aria-label="Text input with radio button">
                                 </div>
                                 <div class="input-group mb-3">
-                                    <input type="date" class="form-control" id="Fecha_i" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="date" class="form-control" name="FechaInicio" id="FechaInicio" aria-label="Username" aria-describedby="basic-addon1">
                                     <span class="input-group-text w-50 d-inline" id="basic-addon2">Fecha Inicial</span>
                                 </div>
 
                                 <div class="input-group mb-3">
-                                    <input type="date" class="form-control" id="Fecha_f" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <input type="date" class="form-control" name="FechaFinal" id="FechaFinal" aria-label="Recipient's username" aria-describedby="basic-addon2">
                                     <span class="input-group-text  w-50 d-inline" id="basic-addon2">Fecha Final</span>
                                 </div>
                             
                                 <div class="input-group mb-3">
-                                    <select class="form-control w-50" name="Menu_estado" id="Menu_estado">
+                                    <select class="form-control w-50" name="Estado" id="Estado">
                                     <option value="">Seleccion el Estado: </option>
                                             <?php
                                             include "../SICADMI-master/php/conexion.php";
@@ -399,7 +398,7 @@
                                     <input type="text" class="form-control input-group-text" placeholder="Estado del caso" aria-label="Text input with radio button">
                                 </div>
                                 <div class="input-group mb-3">
-                                    <select class="form-control w-50" name="Menu_cliente" id="Menu_cliente">
+                                    <select class="form-control w-50" name="Cliente" id="Cliente">
                                             <option value="">Seleccion el cliente: </option>
                                             <?php
                                             include "../SICADMI-master/php/conexion.php";
@@ -414,11 +413,11 @@
                                     <input type="text" class="form-control input-group-text" placeholder="Seleccione el cliente" aria-label="Text input with radio button">
                                 </div>
                                 <div class="input-group mb-3">
-                                    <textarea class="form-control" id="Observacion" aria-label="With textarea"></textarea>
+                                    <textarea class="form-control" name="Observacion" id="Observacion" aria-label="With textarea"></textarea>
                                     <span class="input-group-text d-inline">Observaciones</span>
                                 </div>
                                 <div class="d-flex justify-content-center mt-4">
-                                    <button type="button" class="btn btn-primary" id="Guardar">Guardar</button>
+                                    <button class="btn btn-primary" id="btnGuardar">Enviar</button>
                                 </div>
                             </form>
 
@@ -473,9 +472,7 @@
 
 
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
+        
 
         <script src="./js/proceso.js"></script>
         <script src="./js/alert.js"></script>
