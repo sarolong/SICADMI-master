@@ -63,19 +63,7 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Componentes</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Personalizados:</h6>
-                        <a class="collapse-item" href="#">Por Asignar</a>
-                        <a class="collapse-item" href="#">Por Asignar</a>
-                    </div>
-                </div>
-            </li>
+            
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
@@ -98,42 +86,10 @@
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-            <div class="sidebar-heading">
-                Enlaces
-            </div>
-
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Ayudas</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Por asignar:</h6>
-                        <a class="collapse-item" href="">Por asignar:</a>
-                        <a class="collapse-item" href="">Por asignar</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Por Asignar</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Por Asignar</span></a>
-            </li>
+            
 
             <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+            
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
