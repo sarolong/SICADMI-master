@@ -141,6 +141,7 @@ function Eliminar(Identificacion) {
 
 }
 
+
 $('#Editar').on("click", function () {
     var Identificacion = document.getElementById("MIdentificacion").value;
     var Nombres = document.getElementById("MNombres").value;

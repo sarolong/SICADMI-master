@@ -335,7 +335,7 @@
                             <div class="card-header py-3 text-center mb-5">
                                 <h3 class="m-0 font-weight-bold text-primary">Registrar Ticket</h3>
                             </div>
-                        <form id="ticket">
+                        <form id="tickets">
                             <div class="input-group mb-3">
                                     <select class="form-control w-50" name="menu-servicio" id="menu-servicio">
                                         <option value="">Seleccione el servicio:</option>
@@ -387,7 +387,7 @@
                                             <?php
                                             while ($datos = mysqli_fetch_array($query)) {
                                             ?>
-                                            <option value="<?php echo $datos['PK_Id_Cliente']?>"><?php echo $datos['Nombres']?><?php echo " "?><?php echo $datos['Apellidos']?></option>
+                                            <option value="<?php echo $datos['Nombres']?><?php echo " "?><?php echo $datos['Apellidos']?>"><?php echo $datos['Nombres']?><?php echo " "?><?php echo $datos['Apellidos']?></option>
                                         <?php } ?> 
                                     </select>
                                     <input type="text" class="form-control input-group-text" placeholder="Seleccione el cliente" aria-label="Text input with radio button">
@@ -397,7 +397,7 @@
                                     <span class="input-group-text d-inline">Observaciones</span>
                                 </div>
                                 <div class="d-flex justify-content-center mt-4">
-                                    <button class="btn btn-primary" id="btnGuardar">Guardar</button>
+                                    <button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
                                 </div>
                             </form>
 
