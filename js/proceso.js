@@ -106,13 +106,13 @@ function Factura(Identificacion) {
         data: { Identificacion: Identificacion }
     }).done(function (respuesta) {
         var JsonF = JSON.parse(respuesta);
-        document.getElementById('MIdTicket').value = JsonF[0].Id;
-        document.getElementById('MDescripcion').value = JsonF[0].Des;
-        document.getElementById('MFechaI').value = JsonF[0].FI;
-        document.getElementById('MFechaF').value = JsonF[0].FF;
-        document.getElementById('MEstado').value = JsonF[0].Estado;
-        document.getElementById('MCliente').value = JsonF[0].Cl;
-        document.getElementById('MObservacion').value = JsonF[0].Obs;
+        document.getElementById('MIdTicket').innerHTML = JsonF[0].Id;
+        document.getElementById('MDescripcion').innerHTML = JsonF[0].Des;
+        document.getElementById('MFechaI').innerHTML = JsonF[0].FI;
+        document.getElementById('MFechaF').innerHTML = JsonF[0].FF;
+        document.getElementById('MEstado').innerHTML = JsonF[0].Estado;
+        document.getElementById('MCliente').innerHTML = JsonF[0].Cl;
+        document.getElementById('MObservacion').innerHTML = JsonF[0].Obs;
 
     });
 }
@@ -167,6 +167,23 @@ $('#Editar').on("click", function () {
             Mostrar(document.getElementById('BuscarID'));
         } else {
             Falla("Error");
+        }
+
+    });
+})
+
+$('#Pagar').on("click", function () {
+    var Id = document.getElementById("MIdTicket").innerHTML;
+    $.ajax({
+        url: './php/Pagar.php',
+        type: 'POST',
+        data: {Id: Id}
+    }).done(function (respuesta) {
+        if (respuesta == "Exito") {
+            Exito("Pago Exitoso");
+            MCase('');
+        } else {
+            Falla(respuesta);
         }
 
     });
