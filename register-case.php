@@ -11,8 +11,10 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
     <title>SICADMI - Dashboard</title>
-<!--SweetAlert2-->
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <!--SweetAlert2-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
     <!-- Custom fonts for this template-->
@@ -33,7 +35,7 @@
         header('location: LoginPagi.php');
     }
     ?>
-    
+
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -304,8 +306,8 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo "Bienvenido a <strong>SICADMI</strong> | " ?></span>    
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $usuario ?></span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo "Bienvenido a <strong>SICADMI</strong> | " ?></span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $usuario ?></span>
                                 <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
@@ -341,7 +343,7 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard - RegisterCase</h1>
-                        
+
                     </div>
 
                     <div class="row justify-content-center">
@@ -351,19 +353,19 @@
                             <div class="card-header py-3 text-center mb-5">
                                 <h3 class="m-0 font-weight-bold text-primary">Registrar Ticket</h3>
                             </div>
-                        <form id="tickets">
-                            <div class="input-group mb-3">
+                            <form id="tickets">
+                                <div class="input-group mb-3">
                                     <select class="form-control w-50" name="menu-servicio" id="menu-servicio">
                                         <option value="">Seleccione el servicio:</option>
                                         <?php
                                         include "../SICADMI-master/php/conexion.php";
-                                        $query = mysqli_query($con,"SELECT * FROM tbl_servicios");
-                                        ?> 
+                                        $query = mysqli_query($con, "SELECT * FROM tbl_servicios");
+                                        ?>
                                         <?php
                                         while ($valores = mysqli_fetch_array($query)) {
-                                            ?>
-                                            <option value="<?php echo $valores['Nombre_Servicio']?>"><?php echo $valores['PK_Id_Servicio']?> - <?php echo $valores['Nombre_Servicio']?> - <?php echo $valores['Descripcion']?></option>
-                                        <?php } ?>  
+                                        ?>
+                                            <option value="<?php echo $valores['Nombre_Servicio'] ?>"><?php echo $valores['PK_Id_Servicio'] ?> - <?php echo $valores['Nombre_Servicio'] ?> - <?php echo $valores['Descripcion'] ?></option>
+                                        <?php } ?>
                                     </select>
 
                                     <input type="text" class="form-control input-group-text" placeholder="Seleccione el servicio" aria-label="Text input with radio button">
@@ -377,34 +379,34 @@
                                     <input type="date" class="form-control" id="FechaFinal" aria-label="Recipient's username" aria-describedby="basic-addon2">
                                     <span class="input-group-text  w-50 d-inline" id="basic-addon2">Fecha Final</span>
                                 </div>
-                            
+
                                 <div class="input-group mb-3">
                                     <select class="form-control w-50" name="menu-estado" id="menu-estado">
-                                    <option value="">Seleccion el Estado: </option>
-                                            <?php
-                                            include "../SICADMI-master/php/conexion.php";
-                                            $query = mysqli_query($con,"SELECT * FROM tbl_estado");
-                                            ?> 
-                                            <?php
-                                            while ($datos = mysqli_fetch_array($query)) {
-                                            ?>
-                                            <option value="<?php echo $datos['Nombre_Estado']?>"><?php echo $datos['Nombre_Estado']?> | <?php echo $datos['Descripcion']?></option>
-                                        <?php } ?> 
+                                        <option value="">Seleccion el Estado: </option>
+                                        <?php
+                                        include "../SICADMI-master/php/conexion.php";
+                                        $query = mysqli_query($con, "SELECT * FROM tbl_estado");
+                                        ?>
+                                        <?php
+                                        while ($datos = mysqli_fetch_array($query)) {
+                                        ?>
+                                            <option value="<?php echo $datos['Nombre_Estado'] ?>"><?php echo $datos['Nombre_Estado'] ?> | <?php echo $datos['Descripcion'] ?></option>
+                                        <?php } ?>
                                     </select>
                                     <input type="text" class="form-control input-group-text" placeholder="Estado del caso" aria-label="Text input with radio button">
                                 </div>
                                 <div class="input-group mb-3">
                                     <select class="form-control w-50" name="menu-cliente" id="menu-cliente">
-                                            <option value="">Seleccion el cliente: </option>
-                                            <?php
-                                            include "../SICADMI-master/php/conexion.php";
-                                            $query = mysqli_query($con,"SELECT * FROM tbl_clientes");
-                                            ?> 
-                                            <?php
-                                            while ($datos = mysqli_fetch_array($query)) {
-                                            ?>
-                                            <option value="<?php echo $datos['PK_Id_Cliente']?>"><?php echo $datos['Nombres']?><?php echo " "?><?php echo $datos['Apellidos']?></option>
-                                        <?php } ?> 
+                                        <option value="">Seleccion el cliente: </option>
+                                        <?php
+                                        include "../SICADMI-master/php/conexion.php";
+                                        $query = mysqli_query($con, "SELECT * FROM tbl_clientes");
+                                        ?>
+                                        <?php
+                                        while ($datos = mysqli_fetch_array($query)) {
+                                        ?>
+                                            <option value="<?php echo $datos['PK_Id_Cliente'] ?>"><?php echo $datos['Nombres'] ?><?php echo " " ?><?php echo $datos['Apellidos'] ?></option>
+                                        <?php } ?>
                                     </select>
                                     <input type="text" class="form-control input-group-text" placeholder="Seleccione el cliente" aria-label="Text input with radio button">
                                 </div>
@@ -432,13 +434,13 @@
             <!-- End of Content Wrapper -->
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; SICADMI 2022</span>
-                        </div>
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; SICADMI 2022</span>
                     </div>
-                </footer>
-                <!-- End of Footer -->
+                </div>
+            </footer>
+            <!-- End of Footer -->
         </div>
         <!-- End of Page Wrapper -->
 

@@ -365,7 +365,7 @@
                                 </div>
 
                                 <div class="input-group mb-3">
-                                    <span  span class="input-group-text w-25 d-inline" id="basic-addon2">Apellidos</span>
+                                    <span span class="input-group-text w-25 d-inline" id="basic-addon2">Apellidos</span>
                                     <input type="text" id="Apellidos" class="form-control" aria-label="Apellidos" aria-describedby="basic-addon2" required>
                                 </div>
 
@@ -410,15 +410,15 @@
                 <!-- End of Main Content -->
             </div>
             <!-- End of Content Wrapper -->
-                <!-- Footer -->
-                <footer class="sticky-footer bg-white">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; SICADMI 2022</span>
-                        </div>
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; SICADMI 2022</span>
                     </div>
-                </footer>
-                <!-- End of Footer -->
+                </div>
+            </footer>
+            <!-- End of Footer -->
         </div>
         <!-- End of Page Wrapper -->
 

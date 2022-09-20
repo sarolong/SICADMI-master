@@ -10,7 +10,8 @@
     <meta name="author" content="">
 
     <title>SICADMI - Dashboard</title>
-
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -21,7 +22,8 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="Pendiente();">
+
     <?php
     session_start();
     $usuario = $_SESSION['Usuario'];
@@ -29,7 +31,7 @@
         header('location: LoginPagi.php');
     }
     ?>
-    
+
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -300,8 +302,8 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo "Bienvenido a <strong>SICADMI</strong> |" ?></span>
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $usuario ?></span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo "Bienvenido a <strong>SICADMI</strong> |" ?></span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $usuario ?></span>
                                 <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
@@ -344,17 +346,19 @@
                     <div class="row">
 
                         <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="col-xl-4 col-md-7 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Agendadas</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">40</div>
+                                                Tickets Abiertos</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                <?php require './php/ContarTickets.php'; ?> 
+                                            </div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -362,44 +366,40 @@
                         </div>
 
                         <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="col-xl-4 col-md-7 mb-4">
+                            <div class="card border-left-danger shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                                Tickets Pendientes</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                <p id=Pendiente></p>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-4 col-md-7 mb-4">
                             <div class="card border-left-success shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Tickets</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">215</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tareas
+                                            <div class="text-xs font-weight-bold text-succes text-uppercase mb-1">Tickets Finalizados
                                             </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="progress progress-sm mr-2">
-                                                        <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                <?php require './php/TicketsFinalizados.php'; ?> 
                                             </div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -407,22 +407,7 @@
                         </div>
 
                         <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Respuestas Pendientes</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
 
                     <!-- Content Row -->
@@ -430,55 +415,7 @@
                     <div class="row justify-content-center">
 
                         <!-- Area registro -->
-                        <div class="col-lg-8 mb-4 px-0">
-                            <div class="card-header py-3 text-center">
-                                <h3 class="m-0 font-weight-bold text-primary">Registrar Ticket</h3>
-                            </div>
-                            <form id="ticket">
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text">Describalo aquí</span>
-                                    <textarea class="form-control" aria-label="With textarea"></textarea>
-                                </div>
 
-                                <div class="input-group mb-3">
-                                    <input type="date" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
-                                    <span class="input-group-text" id="basic-addon2">Fecha Inicial</span>
-                                </div>
-
-                                <div class="input-group mb-3">
-                                    <input type="date" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                    <span class="input-group-text" id="basic-addon2">Fecha Final</span>
-                                </div>
-                            
-                                <div class="input-group mb-2">
-                                    <select class="form-control" name="menu-estado" id="menu-estado">
-                                            <option value="activate">Activo</option>
-                                            <option value="closed">Cerrado</option>
-                                    </select>
-                                    <input type="text" class="form-control" placeholder="Estado del caso" aria-label="Text input with radio button">
-                                </div>
-                                <div class="input-group mb-2">
-                                    <select class="form-control" name="menu-cliente" id="menu-cliente">
-                                            <option value="activate">Activo</option>
-                                            <option value="closed">Cerrado</option>
-                                    </select>
-                                    <input type="text" class="form-control" placeholder="Seleccion el cliente" aria-label="Text input with radio button">
-                                </div>
-                                <div class="input-group mb-2">
-                                    <select class="form-control" name="menu-servicio" id="menu-servicio">
-                                            <option value="activate">Activo</option>
-                                            <option value="closed">Cerrado</option>
-                                    </select>
-                                    <input type="text" class="form-control" placeholder="Seleccione el servicio" aria-label="Text input with radio button">
-                                </div>
-
-                                <div class="d-flex justify-content-center">
-                                    <input onClick="mensaje(); reset()" type="button" value="Registrar Ticket" class="btn btn-primary mt-3">
-                                </div>
-                            </form>
-
-
-                        </div>
 
                         <!-- Content Row -->
 
@@ -492,13 +429,13 @@
             <!-- End of Content Wrapper -->
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; SICADMI 2022</span>
-                        </div>
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; SICADMI 2022</span>
                     </div>
-                </footer>
-                <!-- End of Footer -->
+                </div>
+            </footer>
+            <!-- End of Footer -->
         </div>
         <!-- End of Page Wrapper -->
 
@@ -527,7 +464,7 @@
         </div>
 
 
-
+        <script src="./js/proceso.js"></script>
         <script src="js/alert.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <!-- Bootstrap core JavaScript-->

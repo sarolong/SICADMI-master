@@ -42,6 +42,15 @@ $("#btnGuardar").on("click", function () {
     document.getElementById('tickets').reset();
 });
 
+function Pendiente(){
+    $.ajax({
+        url: './php/Pendientes.php',
+        type: 'POST',
+        data:{Enviando:"Enviando"}
+    }).done(function (data) {
+        document.getElementById('Pendiente').innerHTML=data;
+    })
+}
 
 
 function Mostrar(Letra) {
