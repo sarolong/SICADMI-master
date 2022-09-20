@@ -11,6 +11,9 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
     <title>SICADMI - Dashboard</title>
+<!--SweetAlert2-->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -359,7 +362,7 @@
                                         <?php
                                         while ($valores = mysqli_fetch_array($query)) {
                                             ?>
-                                            <option value=""><?php echo $valores['PK_Id_Servicio']?> - <?php echo $valores['Nombre_Servicio']?> - <?php echo $valores['Descripcion']?></option>
+                                            <option value="<?php echo $valores['Nombre_Servicio']?>"><?php echo $valores['PK_Id_Servicio']?> - <?php echo $valores['Nombre_Servicio']?> - <?php echo $valores['Descripcion']?></option>
                                         <?php } ?>  
                                     </select>
 
@@ -385,7 +388,7 @@
                                             <?php
                                             while ($datos = mysqli_fetch_array($query)) {
                                             ?>
-                                            <option value=""><?php echo $datos['Nombre_Estado']?> | <?php echo $datos['Descripcion']?></option>
+                                            <option value="<?php echo $datos['Nombre_Estado']?>"><?php echo $datos['Nombre_Estado']?> | <?php echo $datos['Descripcion']?></option>
                                         <?php } ?> 
                                     </select>
                                     <input type="text" class="form-control input-group-text" placeholder="Estado del caso" aria-label="Text input with radio button">
@@ -400,7 +403,7 @@
                                             <?php
                                             while ($datos = mysqli_fetch_array($query)) {
                                             ?>
-                                            <option value=""><?php echo $datos['Nombres']?><?php echo " "?><?php echo $datos['Apellidos']?></option>
+                                            <option value="<?php echo $datos['PK_Id_Cliente']?>"><?php echo $datos['Nombres']?><?php echo " "?><?php echo $datos['Apellidos']?></option>
                                         <?php } ?> 
                                     </select>
                                     <input type="text" class="form-control input-group-text" placeholder="Seleccione el cliente" aria-label="Text input with radio button">
