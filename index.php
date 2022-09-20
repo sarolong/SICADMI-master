@@ -64,11 +64,11 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Componentes</span>
+                    <span>Por asignar</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Personalizados:</h6>
+                        <h6 class="collapse-header">Por Asignar:</h6>
                         <a class="collapse-item" href="#">Por Asignar</a>
                         <a class="collapse-item" href="#">Por Asignar</a>
                     </div>
@@ -105,7 +105,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Ayudas</span>
+                    <span>Por asignar</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -154,18 +154,6 @@
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
-
-                    <!-- Topbar Search -->
-                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar..." aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -281,16 +269,6 @@
                                         <div class="small text-gray-500">Morgan Alvarez · 2d</div>
                                     </div>
                                 </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Un mensaje</div>
-                                        <div class="small text-gray-500">Cocina el Perro · 2w</div>
-                                    </div>
-                                </a>
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Leer mas mensajes</a>
                             </div>
                         </li>
@@ -334,150 +312,21 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i>Generar Reporte</a>
-                    </div>
-
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Agendadas</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">40</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Tickets</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">215</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tareas
-                                            </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="progress progress-sm mr-2">
-                                                        <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Respuestas Pendientes</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Content Row -->
-
                     <div class="row justify-content-center">
-
-                        <!-- Area registro -->
-                        <div class="col-lg-8 mb-4 px-0">
-                            <div class="card-header py-3 text-center">
-                                <h3 class="m-0 font-weight-bold text-primary">Registrar Ticket</h3>
-                            </div>
-                            <form id="ticket">
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text">Describalo aquí</span>
-                                    <textarea class="form-control" aria-label="With textarea"></textarea>
-                                </div>
-
-                                <div class="input-group mb-3">
-                                    <input type="date" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
-                                    <span class="input-group-text" id="basic-addon2">Fecha Inicial</span>
-                                </div>
-
-                                <div class="input-group mb-3">
-                                    <input type="date" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                    <span class="input-group-text" id="basic-addon2">Fecha Final</span>
-                                </div>
-                            
-                                <div class="input-group mb-2">
-                                    <select class="form-control" name="menu-estado" id="menu-estado">
-                                            <option value="activate">Activo</option>
-                                            <option value="closed">Cerrado</option>
-                                    </select>
-                                    <input type="text" class="form-control" placeholder="Estado del caso" aria-label="Text input with radio button">
-                                </div>
-                                <div class="input-group mb-2">
-                                    <select class="form-control" name="menu-cliente" id="menu-cliente">
-                                            <option value="activate">Activo</option>
-                                            <option value="closed">Cerrado</option>
-                                    </select>
-                                    <input type="text" class="form-control" placeholder="Seleccion el cliente" aria-label="Text input with radio button">
-                                </div>
-                                <div class="input-group mb-2">
-                                    <select class="form-control" name="menu-servicio" id="menu-servicio">
-                                            <option value="activate">Activo</option>
-                                            <option value="closed">Cerrado</option>
-                                    </select>
-                                    <input type="text" class="form-control" placeholder="Seleccione el servicio" aria-label="Text input with radio button">
-                                </div>
-
-                                <div class="d-flex justify-content-center">
-                                    <input onClick="mensaje(); reset()" type="button" value="Registrar Ticket" class="btn btn-primary mt-3">
-                                </div>
-                            </form>
-
-
+                    
+                        <div class="d-inline text-justify mt-5">
+                        <div class="text-center">
+                             <h1 class="display-2 font-weight-bold">SICADMI</h1>
+                        </div>
+                            <br>
+                            <br>
+                            <H4>Es una plataforma intuitiva en la que encuentras la mejor solucion</H4>
+                            <h4>a tus requerimientos.</h4>
+                            <br>
+                            <br>
+                            <h6 class="text-center">
+                                <strong>Disfruta la experiencia de una mesa de servicios sencilla y eficaz.</strong> 
+                            </h6>
                         </div>
 
                         <!-- Content Row -->

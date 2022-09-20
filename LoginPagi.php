@@ -20,7 +20,7 @@
                 <div class="border border-2 bg-white shadow p-3 mb-5 bg-body rounded" >
                 <form class="px-3 m-3" method="post" autocomplete="off">
                         <div class="text-center ">
-                            <img style="height: 150px; width: 150px; " src="./img/login.jpg" alt="">
+                            <img style="height: 150px; width: 150px; " src="../SICADMI-master/img/login.png" alt="">
                         </div>
                         <div class=" text-center">
                         

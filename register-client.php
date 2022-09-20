@@ -73,7 +73,7 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Personalizados:</h6>
+                        <h6 class="collapse-header">Por Asignar:</h6>
                         <a class="collapse-item" href="#">Por Asignar</a>
                         <a class="collapse-item" href="#">Por Asignar</a>
                     </div>
@@ -89,7 +89,7 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Utilidades:</h6>
-                        <a class="collapse-item" href="#">Registrar Ticket</a>
+                        <a class="collapse-item" href="register-case.php">Registrar Ticket</a>
                         <a class="collapse-item" href="ConsultarTickets.php">Consultar Tickets</a>
                         <a class="collapse-item" href="register-client.php">Registrar Clientes</a>
                         <a class="collapse-item" href="select-client.php">Consultar Clientes</a>
@@ -110,11 +110,11 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Ayudas</span>
+                    <span>Por Asignar</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Personalizados:</h6>
+                        <h6 class="collapse-header">Por Asignar</h6>
                         <a class="collapse-item" href="#">Por Asignar</a>
                         <a class="collapse-item" href="#">Por Asignar</a>
                     </div>
@@ -160,19 +160,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <!-- Topbar Search -->
-                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar..." aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
-                    <!-- Topbar Navbar -->
+                 
                     <ul class="navbar-nav ml-auto">
 
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
@@ -286,16 +274,6 @@
                                         <div class="small text-gray-500">Morgan Alvarez · 2d</div>
                                     </div>
                                 </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Un mensaje</div>
-                                        <div class="small text-gray-500">Cocina el Perro · 2w</div>
-                                    </div>
-                                </a>
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Leer mas mensajes</a>
                             </div>
                         </li>
@@ -341,7 +319,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard - Clients</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Clients</h1>
                     </div>
 
                     <!-- DASCHBOARD -->
