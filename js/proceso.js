@@ -41,8 +41,6 @@ $("#btnGuardar").on("click", function () {
     document.getElementById('tickets').reset();
 });
 
-<<<<<<< HEAD
-=======
 function Pendiente(){
     $.ajax({
         url: './php/Pendientes.php',
@@ -54,7 +52,6 @@ function Pendiente(){
 }
 
 
->>>>>>> Sergio
 function Mostrar(Letra) {
     var tabla = $.ajax({
         url: './php/MostrarTabla.php',
