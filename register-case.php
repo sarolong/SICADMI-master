@@ -380,21 +380,7 @@
                                     <span class="input-group-text  w-50 d-inline" id="basic-addon2">Fecha Final</span>
                                 </div>
 
-                                <div class="input-group mb-3">
-                                    <select class="form-control w-50" name="menu-estado" id="menu-estado">
-                                        <option value="">Seleccion el Estado: </option>
-                                        <?php
-                                        include "../SICADMI-master/php/conexion.php";
-                                        $query = mysqli_query($con, "SELECT * FROM tbl_estado");
-                                        ?>
-                                        <?php
-                                        while ($datos = mysqli_fetch_array($query)) {
-                                        ?>
-                                            <option value="<?php echo $datos['Nombre_Estado'] ?>"><?php echo $datos['Nombre_Estado'] ?> | <?php echo $datos['Descripcion'] ?></option>
-                                        <?php } ?>
-                                    </select>
-                                    <input type="text" class="form-control input-group-text" placeholder="Estado del caso" aria-label="Text input with radio button">
-                                </div>
+                                
                                 <div class="input-group mb-3">
                                     <select class="form-control w-50" name="menu-cliente" id="menu-cliente">
                                         <option value="">Seleccion el cliente: </option>
