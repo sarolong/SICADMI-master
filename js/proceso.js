@@ -24,14 +24,13 @@ $("#btnGuardar").on("click", function () {
     var Servicio = document.getElementById("menu-servicio").value;
     var FechaI = document.getElementById("FechaInicio").value;
     var FechaF = document.getElementById("FechaFinal").value;
-    var Estado = document.getElementById("menu-estado").value;
     var Cliente = document.getElementById("menu-cliente").value;
     var Observacion = document.getElementById("Observacion").value;
 
     $.ajax({
         url: './php/RegistrarTicket.php',
         type: 'POST',
-        data: {Servicio:Servicio,FechaI: FechaI,FechaF: FechaF,Estado:Estado,Cliente:Cliente,Observacion:Observacion}
+        data: {Servicio:Servicio,FechaI: FechaI,FechaF: FechaF,Cliente:Cliente,Observacion:Observacion}
     }).done(function (data) {
         if (data == "Exito") {
             Exito("Ticket Registrado");
@@ -42,6 +41,20 @@ $("#btnGuardar").on("click", function () {
     document.getElementById('tickets').reset();
 });
 
+<<<<<<< HEAD
+=======
+function Pendiente(){
+    $.ajax({
+        url: './php/Pendientes.php',
+        type: 'POST',
+        data:{Enviando:"Enviando"}
+    }).done(function (data) {
+        document.getElementById('Pendiente').innerHTML=data;
+    })
+}
+
+
+>>>>>>> Sergio
 function Mostrar(Letra) {
     var tabla = $.ajax({
         url: './php/MostrarTabla.php',
@@ -99,13 +112,13 @@ function Factura(Identificacion) {
         data: { Identificacion: Identificacion }
     }).done(function (respuesta) {
         var JsonF = JSON.parse(respuesta);
-        document.getElementById('MIdTicket').value = JsonF[0].Id;
-        document.getElementById('MDescripcion').value = JsonF[0].Des;
-        document.getElementById('MFechaI').value = JsonF[0].FI;
-        document.getElementById('MFechaF').value = JsonF[0].FF;
-        document.getElementById('MEstado').value = JsonF[0].Estado;
-        document.getElementById('MCliente').value = JsonF[0].Cl;
-        document.getElementById('MObservacion').value = JsonF[0].Obs;
+        document.getElementById('MIdTicket').innerHTML = JsonF[0].Id;
+        document.getElementById('MDescripcion').innerHTML = JsonF[0].Des;
+        document.getElementById('MFechaI').innerHTML = JsonF[0].FI;
+        document.getElementById('MFechaF').innerHTML = JsonF[0].FF;
+        document.getElementById('MEstado').innerHTML = JsonF[0].Estado;
+        document.getElementById('MCliente').innerHTML = JsonF[0].Cl;
+        document.getElementById('MObservacion').innerHTML = JsonF[0].Obs;
 
     });
 }
@@ -161,6 +174,23 @@ $('#Editar').on("click", function () {
             Mostrar(document.getElementById('BuscarID'));
         } else {
             Falla("Error");
+        }
+
+    });
+})
+
+$('#Pagar').on("click", function () {
+    var Id = document.getElementById("MIdTicket").innerHTML;
+    $.ajax({
+        url: './php/Pagar.php',
+        type: 'POST',
+        data: {Id: Id}
+    }).done(function (respuesta) {
+        if (respuesta == "Exito") {
+            Exito("Pago Exitoso");
+            MCase('');
+        } else {
+            Falla(respuesta);
         }
 
     });

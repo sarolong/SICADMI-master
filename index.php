@@ -10,7 +10,8 @@
     <meta name="author" content="">
 
     <title>SICADMI - Dashboard</title>
-
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -21,7 +22,8 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="Pendiente();">
+
     <?php
     session_start();
     $usuario = $_SESSION['Usuario'];
@@ -29,7 +31,7 @@
         header('location: LoginPagi.php');
     }
     ?>
-    
+
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -61,6 +63,7 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
+<<<<<<< HEAD
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
@@ -74,6 +77,9 @@
                     </div>
                 </div>
             </li>
+=======
+            
+>>>>>>> Sergio
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
@@ -96,6 +102,7 @@
             <hr class="sidebar-divider">
 
             <!-- Heading -->
+<<<<<<< HEAD
             <div class="sidebar-heading">
                 Enlaces
             </div>
@@ -129,9 +136,12 @@
                     <i class="fas fa-fw fa-table"></i>
                     <span>Por Asignar</span></a>
             </li>
+=======
+            
+>>>>>>> Sergio
 
             <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+            
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -155,6 +165,12 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
+<<<<<<< HEAD
+=======
+                    <!-- Topbar Search -->
+                  
+
+>>>>>>> Sergio
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
@@ -179,54 +195,9 @@
                         </li>
 
                         <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
-                            </a>
-                            <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Centro de alertas
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">Diciembre 12, 2019</div>
-                                        <span class="font-weight-bold">Un mensaje</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">Diciembre 7, 2019</div>
-                                        <span class="font-weight-bold">Un mensaje</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">Diciembre 2, 2019</div>
-                                        <span class="font-weight-bold">Un mensaje</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Ver todas las alertas</a>
-                            </div>
-                        </li>
+                        
 
+<<<<<<< HEAD
                         <!-- Nav Item - Messages -->
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -272,14 +243,17 @@
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Leer mas mensajes</a>
                             </div>
                         </li>
+=======
+                       
+>>>>>>> Sergio
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo "Bienvenido a <strong>SICADMI</strong> |" ?></span>
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $usuario ?></span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo "Bienvenido a <strong>SICADMI</strong> |" ?></span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $usuario ?></span>
                                 <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
@@ -312,6 +286,7 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
+<<<<<<< HEAD
                     <div class="row justify-content-center">
                     
                         <div class="d-inline text-justify mt-5">
@@ -328,6 +303,87 @@
                                 <strong>Disfruta la experiencia de una mesa de servicios sencilla y eficaz.</strong> 
                             </h6>
                         </div>
+=======
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-4 col-md-7 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Tickets Abiertos</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                <?php require './php/ContarTickets.php'; ?> 
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-4 col-md-7 mb-4">
+                            <div class="card border-left-danger shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                                Tickets Pendientes</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                <p id=Pendiente></p>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-4 col-md-7 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-succes text-uppercase mb-1">Tickets Finalizados
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                <?php require './php/TicketsFinalizados.php'; ?> 
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pending Requests Card Example -->
+                        
+                    </div>
+
+                    <!-- Content Row -->
+
+                    <div class="row justify-content-center">
+
+                        <!-- Area registro -->
+
+>>>>>>> Sergio
 
                         <!-- Content Row -->
 
@@ -341,13 +397,13 @@
             <!-- End of Content Wrapper -->
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; SICADMI 2022</span>
-                        </div>
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; SICADMI 2022</span>
                     </div>
-                </footer>
-                <!-- End of Footer -->
+                </div>
+            </footer>
+            <!-- End of Footer -->
         </div>
         <!-- End of Page Wrapper -->
 
@@ -376,7 +432,7 @@
         </div>
 
 
-
+        <script src="./js/proceso.js"></script>
         <script src="js/alert.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <!-- Bootstrap core JavaScript-->

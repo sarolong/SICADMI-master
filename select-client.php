@@ -66,6 +66,7 @@
                 Interfaces
             </div>
 
+<<<<<<< HEAD
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
@@ -80,6 +81,9 @@
                     </div>
                 </div>
             </li>
+=======
+            
+>>>>>>> Sergio
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
@@ -101,6 +105,7 @@
             <!-- Divider -->
             <hr class="sidebar-divider">
 
+<<<<<<< HEAD
             <!-- Heading -->
             <div class="sidebar-heading">
                 Enlaces
@@ -138,6 +143,9 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
+=======
+           
+>>>>>>> Sergio
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -161,6 +169,12 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
+<<<<<<< HEAD
+=======
+                    <!-- Topbar Search -->
+                   
+                    <!-- Topbar Navbar -->
+>>>>>>> Sergio
                     <ul class="navbar-nav ml-auto">
 
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
@@ -184,6 +198,7 @@
                         </li>
 
                         <!-- Nav Item - Alerts -->
+<<<<<<< HEAD
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-bell fa-fw"></i>
@@ -277,6 +292,9 @@
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Leer mas mensajes</a>
                             </div>
                         </li>
+=======
+                       
+>>>>>>> Sergio
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -317,10 +335,14 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
+<<<<<<< HEAD
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Querys</h1>
                     </div>
+=======
+                    
+>>>>>>> Sergio
 
                     <!-- DASCHBOARD -->
 

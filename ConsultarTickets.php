@@ -10,6 +10,7 @@
     <meta name="author" content="">
 
     <title>Select</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!--JQuery-->
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <!--SweetAlert2-->
@@ -27,8 +28,8 @@
 
 </head>
 
-<body id="page-top" >
- 
+<body id="page-top">
+
     <?php
     session_start();
     $usuario = $_SESSION['Usuario'];
@@ -335,9 +336,9 @@
                                 <div class="input-group mb-3">
                                     <span class="input-group-text w-25 d-inline" id="basic-addon2">Identificacion</span>
                                     <input type="text" placeholder="Buscar" class="form-control" id="BuscarIDCases" aria-describedby="basic-addon1">
-                               
+
                                 </div>
-                               
+
                                 <div class="d-flex justify-content-center">
                                     <table class="table table-striped table-bordered table-hover mt-5 text-center">
                                         <thead>
@@ -353,7 +354,7 @@
                                             </tr>
                                         </thead>
                                         <tbody id="TablaCases">
-        
+
                                         </tbody>
                                     </table>
                                 </div>
@@ -366,81 +367,83 @@
                 <!-- End of Main Content -->
             </div>
             <!-- Modal Editar CLiente-->
-            <div class="modal fade" id="ModalTickets" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
+            <div class="modal fade" id="ModalTickets" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content" style="width: 400px;">
-                        <div class="modal-header">
-                            <h3 class="modal-title" id="exampleModalLabel">Informacion Personal</h3>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="row modal-header">
+                            <div class="col-12 text-center">
+                            <h3 class="modal-title" id="exampleModalLabel">Factura</h3>
+                            </div>
+                            
+                            
                         </div>
                         <div class="modal-body m-0 row justify-content-center">
 
-                            <div class="col-12">
+                            <div class="col-12 ms-4">
                                 <form>
 
                                     <div class="row g-3 mb-3 align-items-center">
                                         <div class="col-4">
-                                            <label class="col-form-label">Id Tickets</label>
+                                            <label class="col-form-label font-weight-bold">Id Tickets</label>
                                         </div>
                                         <div class="col-8">
-                                            <input type="text" readonly="readonly" id="MIdTicket" class="form-control  text-center">
+                                            <label id="MIdTicket" class="col-form-label"></label>
                                         </div>
                                     </div>
                                     <div class="row g-3 mb-3 align-items-center">
                                         <div class="col-4">
-                                            <label class="col-form-label">Descripcion</label>
+                                            <label class="col-form-label font-weight-bold">Descripcion</label>
                                         </div>
                                         <div class="col-8">
-                                            <input type="text" id="MDescripcion" class="form-control  text-center">
+                                            <label id="MDescripcion" class="col-form-label"></label>
                                         </div>
                                     </div>
                                     <div class="row g-3 mb-3 align-items-center">
                                         <div class="col-4">
-                                            <label class="col-form-label">Fecha Inicio</label>
+                                            <label class="col-form-label font-weight-bold">Fecha Inicio</label>
                                         </div>
                                         <div class="col-8">
-                                            <input type="text" id="MFechaI" class="form-control  text-center">
+                                            <label id="MFechaI" class="col-form-label"></label>
                                         </div>
                                     </div>
                                     <div class="row g-3 mb-3 align-items-center">
                                         <div class="col-4">
-                                            <label class="col-form-label">Fecha Final</label>
+                                            <label class="col-form-label font-weight-bold">Fecha Final</label>
                                         </div>
-                                        <div class="col-8">
-                                            <input type="text" id="MFechaF" class="form-control  text-center">
-                                        </div>
-                                    </div>
-                                    <div class="row g-3 mb-3 align-items-center">
-                                        <div class="col-4">
-                                            <label class="col-form-label">Estado</label>
-                                        </div>
-                                        <div class="col-8">
-                                            <input type="text" id="MEstado" class="form-control  text-center">
+                                        <div class="col-8"> 
+                                            <label id="MFechaF" class="col-form-label"></label>
                                         </div>
                                     </div>
                                     <div class="row g-3 mb-3 align-items-center">
                                         <div class="col-4">
-                                            <label class="col-form-label">Cliente</label>
+                                            <label class="col-form-label font-weight-bold">Estado</label>
                                         </div>
                                         <div class="col-8">
-                                            <input class="form-control text-center" type="text" id="MCliente">
+                                            <label id="MEstado" class="col-form-label"></label>
                                         </div>
                                     </div>
                                     <div class="row g-3 mb-3 align-items-center">
                                         <div class="col-4">
-                                            <label class="col-form-label">Observacion</label>
+                                            <label class="col-form-label font-weight-bold">Cliente</label>
                                         </div>
                                         <div class="col-8">
-                                            <input type="text" id="MObservacion" class="form-control text-center">
+                                            <label id="MCliente" class="col-form-label"></label>
                                         </div>
                                     </div>
-                                 
+                                    <div class="row g-3 mb-3 align-items-center">
+                                        <div class="col-4">
+                                            <label class="col-form-label font-weight-bold">Observacion</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <label id="MObservacion" class="col-form-label"></label>
+                                        </div>
+                                    </div>
+
                                 </form>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button class="A btn btn-primary" data-bs-dismiss="modal" type="button" id="Editar">Actualizar</button>
+                            <button class="A btn btn-primary" data-bs-dismiss="modal" type="button" id="Pagar">Pagar</button>
                             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
@@ -484,16 +487,14 @@
         </div>
 
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
         <script src="./js/proceso.js"></script>
         <script src="./js/alert.js"></script>
         <script>
-        setInterval(MCase(''),1000);
+            setInterval(MCase(''), 1000);
         </script>
-        
+
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <!-- Bootstrap core JavaScript-->
         <script src="vendor/jquery/jquery.min.js"></script>
