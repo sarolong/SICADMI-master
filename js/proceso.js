@@ -20,6 +20,27 @@ $("#btnRegistrar").on("click", function () {
     })
     document.getElementById('ticket').reset();
 });
+$("#btnGuardar").on("click", function () {
+    var Servicio = document.getElementById("menu-servicio").value;
+    var FechaI = document.getElementById("FechaInicio").value;
+    var FechaF = document.getElementById("FechaFinal").value;
+    var Estado = document.getElementById("menu-estado").value;
+    var Cliente = document.getElementById("menu-cliente").value;
+    var Observacion = document.getElementById("Observacion").value;
+
+    $.ajax({
+        url: './php/RegistrarTicket.php',
+        type: 'POST',
+        data: {Servicio:Servicio,FechaI: FechaI,FechaF: FechaF,Estado:Estado,Cliente:Cliente,Observacion:Observacion}
+    }).done(function (data) {
+        if (data == "Exito") {
+            Exito("Ticket Registrado");
+        }else{
+            Falla(data);
+        }
+    })
+    document.getElementById('tickets').reset();
+});
 
 function Mostrar(Letra) {
     var tabla = $.ajax({
