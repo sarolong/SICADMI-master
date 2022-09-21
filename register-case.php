@@ -8,15 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
-    <title>SICADMI - Dashboard</title>
-    <!--JQuery-->
-    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <!--SweetAlert2-->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
-    <!-- Custom fonts for this template-->
+    <title>RegistrarTickets</title>
+    <link rel="icon" type="image/jpg" href="./assets/support.jpg"/>
     <!--JQuery-->
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <!--SweetAlert2-->
@@ -29,7 +24,6 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
 
 </head>
@@ -74,20 +68,7 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Por asignar</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Por asignar</h6>
-                        <a class="collapse-item" href="#">Por Asignar</a>
-                        <a class="collapse-item" href="#">Por Asignar</a>
-                    </div>
-                </div>
-            </li>
-
+           
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
@@ -109,43 +90,7 @@
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-            <div class="sidebar-heading">
-                Enlaces
-            </div>
-
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Por asignar</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Por asignar:</h6>
-                        <a class="collapse-item" href="">Por asignar:</a>
-                        <a class="collapse-item" href="">Por asignar</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Por Asignar</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Por Asignar</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
+            
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
@@ -168,6 +113,9 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
+                    
+
+                    <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
@@ -187,101 +135,6 @@
                                         </div>
                                     </div>
                                 </form>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
-                            </a>
-                            <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Centro de alertas
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">Diciembre 12, 2019</div>
-                                        <span class="font-weight-bold">Un mensaje</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">Diciembre 7, 2019</div>
-                                        <span class="font-weight-bold">Un mensaje</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">Diciembre 2, 2019</div>
-                                        <span class="font-weight-bold">Un mensaje</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Ver todas las alertas</a>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Messages -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-envelope fa-fw"></i>
-                                <!-- Counter - Messages -->
-                                <span class="badge badge-danger badge-counter">7</span>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
-                                <h6 class="dropdown-header">
-                                    INBOX
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Un mensaje</div>
-                                        <div class="small text-gray-500">Emily FLorez · 58m</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="...">
-                                        <div class="status-indicator"></div>
-                                    </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Un mensaje</div>
-                                        <div class="small text-gray-500">Jane Chuls · 1d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg" alt="...">
-                                        <div class="status-indicator bg-warning"></div>
-                                    </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Un mensaje</div>
-                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Leer mas mensajes</a>
                             </div>
                         </li>
 
@@ -325,10 +178,7 @@
                 <div class="container-fluid ms-0">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">RegisterCase</h1>
-                        
-                    </div>
+                    
 
                     <div class="row justify-content-center">
 
@@ -352,40 +202,40 @@
                                         <?php } ?>
                                     </select>
 
-                                    <input type="text" class="form-control input-group-text" placeholder="Seleccione el servicio" aria-label="Text input with radio button">
+                                    <span class="form-control input-group-text">
                                 </div>
                                 <div class="input-group mb-3">
-                                    <input type="date" class="form-control" name="FechaInicio" id="FechaInicio" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="date" class="form-control" id="FechaInicio" aria-label="Username" aria-describedby="basic-addon1">
                                     <span class="input-group-text w-50 d-inline" id="basic-addon2">Fecha Inicial</span>
                                 </div>
 
                                 <div class="input-group mb-3">
-                                    <input type="date" class="form-control" name="FechaFinal" id="FechaFinal" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <input type="date" class="form-control" id="FechaFinal" aria-label="Recipient's username" aria-describedby="basic-addon2">
                                     <span class="input-group-text  w-50 d-inline" id="basic-addon2">Fecha Final</span>
                                 </div>
 
                                 
                                 <div class="input-group mb-3">
                                     <select class="form-control w-50" name="menu-cliente" id="menu-cliente">
-                                            <option value="">Seleccion el cliente: </option>
-                                            <?php
-                                            include "../SICADMI-master/php/conexion.php";
-                                            $query = mysqli_query($con,"SELECT * FROM tbl_clientes");
-                                            ?> 
-                                            <?php
-                                            while ($datos = mysqli_fetch_array($query)) {
-                                            ?>
-                                            <option value="<?php echo $datos['Nombres']?><?php echo " "?><?php echo $datos['Apellidos']?>"><?php echo $datos['Nombres']?><?php echo " "?><?php echo $datos['Apellidos']?></option>
-                                        <?php } ?> 
+                                        <option value="">Seleccione el cliente: </option>
+                                        <?php
+                                        include "../SICADMI-master/php/conexion.php";
+                                        $query = mysqli_query($con, "SELECT * FROM tbl_clientes");
+                                        ?>
+                                        <?php
+                                        while ($datos = mysqli_fetch_array($query)) {
+                                        ?>
+                                            <option value="<?php echo $datos['PK_Id_Cliente'] ?>"><?php echo $datos['Nombres'] ?><?php echo " " ?><?php echo $datos['Apellidos'] ?></option>
+                                        <?php } ?>
                                     </select>
-                                    <input type="text" class="form-control input-group-text" placeholder="Seleccione el cliente" aria-label="Text input with radio button">
+                                    <span class="form-control input-group-text">
                                 </div>
                                 <div class="input-group mb-3">
-                                    <textarea class="form-control" name="Observacion" id="Observacion" aria-label="With textarea"></textarea>
+                                    <textarea class="form-control" id="Observacion" aria-label="With textarea" required></textarea>
                                     <span class="input-group-text d-inline">Observaciones</span>
                                 </div>
                                 <div class="d-flex justify-content-center mt-4">
-                                    <button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
+                                    <button type="button" class="btn btn-primary"onClick="validar()" id="btnGuardar">Guardar</button>
                                 </div>
                             </form>
 
@@ -440,11 +290,8 @@
 
 
 
-        
-
-        <script src="./js/proceso.js"></script>
         <script src="./js/alert.js"></script>
-        
+        <script src="./js/proceso.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <!-- Bootstrap core JavaScript-->
         <script src="vendor/jquery/jquery.min.js"></script>

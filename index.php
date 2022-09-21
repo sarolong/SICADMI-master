@@ -10,6 +10,7 @@
     <meta name="author" content="">
 
     <title>SICADMI - Dashboard</title>
+    <link rel="icon" type="image/jpg" href="./assets/support.jpg"/>
     <!--JQuery-->
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <!-- Custom fonts for this template-->
@@ -63,23 +64,7 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-<<<<<<< HEAD
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Por asignar</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Por Asignar:</h6>
-                        <a class="collapse-item" href="#">Por Asignar</a>
-                        <a class="collapse-item" href="#">Por Asignar</a>
-                    </div>
-                </div>
-            </li>
-=======
             
->>>>>>> Sergio
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
@@ -102,43 +87,7 @@
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-<<<<<<< HEAD
-            <div class="sidebar-heading">
-                Enlaces
-            </div>
-
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Por asignar</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Por asignar:</h6>
-                        <a class="collapse-item" href="">Por asignar:</a>
-                        <a class="collapse-item" href="">Por asignar</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Por Asignar</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Por Asignar</span></a>
-            </li>
-=======
             
->>>>>>> Sergio
 
             <!-- Divider -->
             
@@ -165,12 +114,9 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-<<<<<<< HEAD
-=======
                     <!-- Topbar Search -->
                   
 
->>>>>>> Sergio
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
@@ -197,55 +143,7 @@
                         <!-- Nav Item - Alerts -->
                         
 
-<<<<<<< HEAD
-                        <!-- Nav Item - Messages -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-envelope fa-fw"></i>
-                                <!-- Counter - Messages -->
-                                <span class="badge badge-danger badge-counter">7</span>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
-                                <h6 class="dropdown-header">
-                                    INBOX
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Un mensaje</div>
-                                        <div class="small text-gray-500">Emily FLorez · 58m</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="...">
-                                        <div class="status-indicator"></div>
-                                    </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Un mensaje</div>
-                                        <div class="small text-gray-500">Jane Chuls · 1d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg" alt="...">
-                                        <div class="status-indicator bg-warning"></div>
-                                    </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Un mensaje</div>
-                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Leer mas mensajes</a>
-                            </div>
-                        </li>
-=======
                        
->>>>>>> Sergio
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -286,24 +184,6 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-<<<<<<< HEAD
-                    <div class="row justify-content-center">
-                    
-                        <div class="d-inline text-justify mt-5">
-                        <div class="text-center">
-                             <h1 class="display-2 font-weight-bold">SICADMI</h1>
-                        </div>
-                            <br>
-                            <br>
-                            <H4>Es una plataforma intuitiva en la que encuentras la mejor solucion</H4>
-                            <h4>a tus requerimientos.</h4>
-                            <br>
-                            <br>
-                            <h6 class="text-center">
-                                <strong>Disfruta la experiencia de una mesa de servicios sencilla y eficaz.</strong> 
-                            </h6>
-                        </div>
-=======
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
@@ -382,17 +262,16 @@
                     <div class="row justify-content-center">
 
                         <!-- Area registro -->
-
->>>>>>> Sergio
-
                         <!-- Content Row -->
 
                     </div>
                     <!-- /.container-fluid -->
-
+                        
                 </div>
                 <!-- End of Main Content -->
-
+                        <div>
+                            <div style="font-size:450px;" class="display-1 text-center"><i class="fa fa-users"></i></div>
+                        </div>
             </div>
             <!-- End of Content Wrapper -->
             <!-- Footer -->
