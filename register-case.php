@@ -225,7 +225,7 @@
                                         <?php
                                         while ($datos = mysqli_fetch_array($query)) {
                                         ?>
-                                            <option value="<?php echo $datos['PK_Id_Cliente'] ?>"><?php echo $datos['Nombres'] ?><?php echo " " ?><?php echo $datos['Apellidos'] ?></option>
+                                            <option value="<?php echo $datos['Nombres'] ?><?php echo " " ?><?php echo $datos['Apellidos'] ?>"><?php echo $datos['Nombres'] ?><?php echo " " ?><?php echo $datos['Apellidos'] ?></option>
                                         <?php } ?>
                                     </select>
                                     <span class="form-control input-group-text">
