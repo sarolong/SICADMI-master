@@ -233,6 +233,10 @@
                                     <textarea class="form-control" id="Observacion" aria-label="With textarea"></textarea>
                                     <span class="input-group-text d-inline">Observaciones</span>
                                 </div>
+                                <div class="input-group mb-3">
+                                    <input class="form-control" id="ValorR" type="text"></input>
+                                    <span class="input-group-text d-inline">Valor</span>
+                                </div>
                                 <div class="d-flex justify-content-center mt-4">
                                     <button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
                                 </div>
