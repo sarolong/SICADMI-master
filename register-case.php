@@ -191,7 +191,7 @@
                                     <select class="form-control w-50" name="menu-servicio" id="menu-servicio">
                                         <option value="">Seleccione el servicio:</option>
                                         <?php
-                                        include "../SICADMI-master/php/conexion.php";
+                                        include "./php/conexion.php";
                                         $query = mysqli_query($con, "SELECT * FROM tbl_servicios");
                                         ?>
                                         <?php
@@ -218,7 +218,7 @@
                                     <select class="form-control w-50" name="menu-cliente" id="menu-cliente">
                                         <option value="">Seleccion el cliente: </option>
                                         <?php
-                                        include "../SICADMI-master/php/conexion.php";
+                                        include "./php/conexion.php";
                                         $query = mysqli_query($con, "SELECT * FROM tbl_clientes");
                                         ?>
                                         <?php

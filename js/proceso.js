@@ -26,6 +26,7 @@ $("#btnGuardar").on("click", function () {
     var FechaF = document.getElementById("FechaFinal").value;
     var Cliente = document.getElementById("menu-cliente").value;
     var Observacion = document.getElementById("Observacion").value;
+    
 
     $.ajax({
         url: './php/RegistrarTicket.php',
