@@ -26,11 +26,13 @@ $("#btnGuardar").on("click", function () {
     var FechaF = document.getElementById("FechaFinal").value;
     var Cliente = document.getElementById("menu-cliente").value;
     var Observacion = document.getElementById("Observacion").value;
+    var Valor = document.getElementById("ValorR").value;
+    
 
     $.ajax({
         url: './php/RegistrarTicket.php',
         type: 'POST',
-        data: {Servicio:Servicio,FechaI: FechaI,FechaF: FechaF,Cliente:Cliente,Observacion:Observacion}
+        data: {Servicio:Servicio,FechaI: FechaI,FechaF: FechaF,Cliente:Cliente,Observacion:Observacion,Valor:Valor}
     }).done(function (data) {
         if (data == "Exito") {
             Exito("Ticket Registrado");

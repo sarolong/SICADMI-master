@@ -1,8 +1,10 @@
 <?php
+  session_start();
 
+  $Usuario=$_SESSION['Usuario'];
         $Letra=$_POST['ID'];
         include 'conexion.php';
-        $Q="SELECT * FROM tbl_tickets WHERE Cliente LIKE '$Letra%' AND Estado != '3'";
+        $Q="SELECT * FROM tbl_tickets WHERE Cliente LIKE '$Letra%' AND Estado != '3' AND Usuario ='$Usuario'";
         $consulta=mysqli_query($con, $Q);
     
         while ($row=mysqli_fetch_array($consulta)){
