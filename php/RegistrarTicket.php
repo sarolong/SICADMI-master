@@ -2,7 +2,7 @@
     include 'conexion.php';
     session_start();
 
-    $Usuario=$_SESSION['Usuario'];
+   $Usuario=$_SESSION['Usuario'];
    $Servicio= $_POST['Servicio'];
    $FechaI=$_POST['FechaI'];
    $FechaF=$_POST['FechaF'];
