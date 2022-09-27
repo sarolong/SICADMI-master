@@ -21,35 +21,48 @@ $("#btnRegistrar").on("click", function () {
     document.getElementById('ticket').reset();
 });
 $("#btnGuardar").on("click", function () {
-    var Servicio = document.getElementById("menu-servicio").value;
-    var FechaI = document.getElementById("FechaInicio").value;
-    var FechaF = document.getElementById("FechaFinal").value;
-    var Cliente = document.getElementById("menu-cliente").value;
-    var Observacion = document.getElementById("Observacion").value;
-    var Valor = document.getElementById("ValorR").value;
-    
+    var fdate = new Date();
 
-    $.ajax({
-        url: './php/RegistrarTicket.php',
-        type: 'POST',
-        data: {Servicio:Servicio,FechaI: FechaI,FechaF: FechaF,Cliente:Cliente,Observacion:Observacion,Valor:Valor}
-    }).done(function (data) {
-        if (data == "Exito") {
-            Exito("Ticket Registrado");
-        }else{
-            Falla(data);
-        }
-    })
-    document.getElementById('tickets').reset();
+    
+var fecha = fdate.getFullYear() + '-0' + ( fdate.getMonth() + 1 ) + '-' +fdate.getDate() ;
+
+    var FechaI = document.getElementById("FechaInicio").value;
+    console.log(FechaI,fecha);
+    if (FechaI< fecha) {
+        Falla('Ingrese Fecha de Inicio Actual');
+    } else {
+        var Servicio = document.getElementById("menu-servicio").value;
+        var FechaF = document.getElementById("FechaFinal").value;
+        var Cliente = document.getElementById("menu-cliente").value;
+        var Observacion = document.getElementById("Observacion").value;
+        var Valor = document.getElementById("ValorR").value;
+
+
+        $.ajax({
+            url: './php/RegistrarTicket.php',
+            type: 'POST',
+            data: { Servicio: Servicio, FechaI: FechaI, FechaF: FechaF, Cliente: Cliente, Observacion: Observacion, Valor: Valor }
+        }).done(function (data) {
+            if (data == "Exito") {
+                Exito("Ticket Registrado");
+                document.getElementById('tickets').reset();
+            } else {
+                Falla(data);
+            }
+        })
+
+    }
+
+    
 });
 
-function Pendiente(){
+function Pendiente() {
     $.ajax({
         url: './php/Pendientes.php',
         type: 'POST',
-        data:{Enviando:"Enviando"}
+        data: { Enviando: "Enviando" }
     }).done(function (data) {
-        document.getElementById('Pendiente').innerHTML=data;
+        document.getElementById('Pendiente').innerHTML = data;
     })
 }
 
@@ -59,25 +72,25 @@ function Mostrar(Letra) {
         url: './php/MostrarTabla.php',
         type: 'POST',
         datatype: 'text',
-        data:{Letra:Letra},
+        data: { Letra: Letra },
         async: false,
     }).responseText;
     document.getElementById('myTable').innerHTML = tabla;
 }
-function MCase(ID){
+function MCase(ID) {
     var tablas = $.ajax({
         url: './php/TablaCases.php',
         type: 'POST',
         datatype: 'text',
-        data:{ID:ID},
+        data: { ID: ID },
         async: false,
     }).responseText;
     document.getElementById('TablaCases').innerHTML = tablas;
 }
-$('#BuscarID').on("keyup",(function() {
+$('#BuscarID').on("keyup", (function () {
     Mostrar(document.getElementById('BuscarID').value);
 }))
-$('#BuscarIDCases').on("keyup",(function() {
+$('#BuscarIDCases').on("keyup", (function () {
     MCase(document.getElementById('BuscarIDCases').value);
 }))
 
@@ -180,7 +193,7 @@ $('#Pagar').on("click", function () {
     $.ajax({
         url: './php/Pagar.php',
         type: 'POST',
-        data: {Id: Id}
+        data: { Id: Id }
     }).done(function (respuesta) {
         if (respuesta == "Exito") {
             Exito("Pago Exitoso");
