@@ -205,6 +205,7 @@
                                                 <th scope="col">Estado</th>
                                                 <th scope="col">Cliente</th>
                                                 <th scope="col">Observacion</th>
+                                                <th scope="col">Total Pagar</th>
                                                 <th scope="col">Factura</th>
                                             </tr>
                                         </thead>
@@ -235,9 +236,9 @@
                         <div class="modal-body m-0 row justify-content-center">
 
                             <div class="col-12 ms-4">
-                                <form>
+                                <form style="font-size: 15px;">
 
-                                    <div class="row g-3 mb-3 align-items-center">
+                                    <div class="row g-3 mb-2 align-items-center">
                                         <div class="col-4">
                                             <label class="col-form-label font-weight-bold">Id Tickets</label>
                                         </div>
@@ -245,7 +246,7 @@
                                             <label id="MIdTicket" class="col-form-label"></label>
                                         </div>
                                     </div>
-                                    <div class="row g-3 mb-3 align-items-center">
+                                    <div class="row g-3 mb-2 align-items-center">
                                         <div class="col-4">
                                             <label class="col-form-label font-weight-bold">Descripcion</label>
                                         </div>
@@ -253,7 +254,7 @@
                                             <label id="MDescripcion" class="col-form-label"></label>
                                         </div>
                                     </div>
-                                    <div class="row g-3 mb-3 align-items-center">
+                                    <div class="row g-3 mb-2 align-items-center">
                                         <div class="col-4">
                                             <label class="col-form-label font-weight-bold">Fecha Inicio</label>
                                         </div>
@@ -261,7 +262,7 @@
                                             <label id="MFechaI" class="col-form-label"></label>
                                         </div>
                                     </div>
-                                    <div class="row g-3 mb-3 align-items-center">
+                                    <div class="row g-3 mb-2 align-items-center">
                                         <div class="col-4">
                                             <label class="col-form-label font-weight-bold">Fecha Final</label>
                                         </div>
@@ -269,7 +270,7 @@
                                             <label id="MFechaF" class="col-form-label"></label>
                                         </div>
                                     </div>
-                                    <div class="row g-3 mb-3 align-items-center">
+                                    <div class="row g-3 mb-2 align-items-center">
                                         <div class="col-4">
                                             <label class="col-form-label font-weight-bold">Estado</label>
                                         </div>
@@ -277,7 +278,7 @@
                                             <label id="MEstado" class="col-form-label"></label>
                                         </div>
                                     </div>
-                                    <div class="row g-3 mb-3 align-items-center">
+                                    <div class="row g-3 mb-2 align-items-center">
                                         <div class="col-4">
                                             <label class="col-form-label font-weight-bold">Cliente</label>
                                         </div>
@@ -285,12 +286,20 @@
                                             <label id="MCliente" class="col-form-label"></label>
                                         </div>
                                     </div>
-                                    <div class="row g-3 mb-3 align-items-center">
+                                    <div class="row g-3 mb-2 align-items-center">
                                         <div class="col-4">
                                             <label class="col-form-label font-weight-bold">Observacion</label>
                                         </div>
                                         <div class="col-8">
                                             <label id="MObservacion" class="col-form-label"></label>
+                                        </div>
+                                    </div>
+                                    <div class="row g-3 mb-2 align-items-center">
+                                        <div class="col-4">
+                                            <label class="col-form-label font-weight-bold">Total Pagar</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <label id="MValor" class="col-form-label"></label>
                                         </div>
                                     </div>
 

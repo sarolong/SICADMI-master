@@ -115,6 +115,7 @@ function Factura(Identificacion) {
         document.getElementById('MEstado').innerHTML = JsonF[0].Estado;
         document.getElementById('MCliente').innerHTML = JsonF[0].Cl;
         document.getElementById('MObservacion').innerHTML = JsonF[0].Obs;
+        document.getElementById('MValor').innerHTML = JsonF[0].Valor;
 
     });
 }

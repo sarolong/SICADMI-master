@@ -22,6 +22,7 @@
         $Estado=$Estado;
         $Cliente=$row['Cliente'];
         $Obs=$row['Observacion'];
+        $Valor=$row['Valor'];
 
         $Json=array();
 
@@ -32,7 +33,8 @@
             'FF' => $FechaF,
             'Estado' => $Estado,
             'Cl' => $Cliente, 
-            'Obs' => $Obs);
+            'Obs' => $Obs,
+            'Valor' => $Valor);
 
         $JsonString=json_encode($Json);
 

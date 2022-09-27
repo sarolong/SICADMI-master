@@ -26,7 +26,8 @@
                 <td>'.$row['FechaFinal'].'</td> 
                 <td style="background-color:#'.$color.';"><b>'.$Estado.'</b></td> 
                 <td>'.$row['Cliente'].'</td> 
-                <td>'.$row['Observacion'].'</td> 
+                <td>'.$row['Observacion'].'</td>
+                <td>'.$row['Valor'].'</td>
     
                 <td>
                 <div class="d-flex">
