@@ -9,7 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clients</title>
+    <title>RegistrarClientes</title>
+    <link rel="icon" type="image/jpg" href="./assets/support.jpg"/>
     <!--JQuery-->
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <!--SweetAlert2-->
@@ -77,7 +78,7 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Utilidades:</h6>
-                        <a class="collapse-item" href="#">Registrar Ticket</a>
+                        <a class="collapse-item" href="register-case.php">Registrar Ticket</a>
                         <a class="collapse-item" href="ConsultarTickets.php">Consultar Tickets</a>
                         <a class="collapse-item" href="register-client.php">Registrar Clientes</a>
                         <a class="collapse-item" href="select-client.php">Consultar Clientes</a>

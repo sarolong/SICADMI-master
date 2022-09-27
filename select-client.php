@@ -9,7 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Select</title>
+    <title>ConsultarClientes</title>
+    <link rel="icon" type="image/jpg" href="./assets/support.jpg"/>
     <!--JQuery-->
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <!--SweetAlert2-->

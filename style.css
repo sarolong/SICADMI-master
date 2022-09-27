@@ -12,9 +12,13 @@ body{
 
 /*FORMULARIO INICIO DE SESION*/
 
-div img{
-    width: 650px;
+.container{
     height: 100vh;
+}
+
+.logo img{
+    height: 100vh;
+    width: 50vw;
 }
 
 div .col{
@@ -39,9 +43,5 @@ div .icon-user {
     font-size: 30px;
     color: #293462;
 }
-@media (min-width:1024px){
-    div img{
-        width: 650px;
-    }
-}
-  
+
+

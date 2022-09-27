@@ -77,7 +77,10 @@ function Mostrar(Letra) {
     }).responseText;
     document.getElementById('myTable').innerHTML = tabla;
 }
-function MCase(ID) {
+
+
+function MCase(ID){
+
     var tablas = $.ajax({
         url: './php/TablaCases.php',
         type: 'POST',
@@ -87,10 +90,12 @@ function MCase(ID) {
     }).responseText;
     document.getElementById('TablaCases').innerHTML = tablas;
 }
-$('#BuscarID').on("keyup", (function () {
+
+$('#BuscarID').on("keyup",(function() {
     Mostrar(document.getElementById('BuscarID').value);
 }))
-$('#BuscarIDCases').on("keyup", (function () {
+
+$('#BuscarIDCases').on("keyup",(function() {
     MCase(document.getElementById('BuscarIDCases').value);
 }))
 
@@ -163,6 +168,7 @@ function Eliminar(Identificacion) {
     })
 
 }
+
 
 $('#Editar').on("click", function () {
     var Identificacion = document.getElementById("MIdentificacion").value;

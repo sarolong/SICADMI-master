@@ -10,6 +10,7 @@
     <meta name="author" content="">
 
     <title>SICADMI - Dashboard</title>
+    <link rel="icon" type="image/jpg" href="./assets/support.jpg"/>
     <!--JQuery-->
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <!-- Custom fonts for this template-->
@@ -261,16 +262,16 @@
                     <div class="row justify-content-center">
 
                         <!-- Area registro -->
-
-
                         <!-- Content Row -->
 
                     </div>
                     <!-- /.container-fluid -->
-
+                        
                 </div>
                 <!-- End of Main Content -->
-
+                        <div>
+                            <div style="font-size:450px;" class="display-1 text-center"><i class="fa fa-users"></i></div>
+                        </div>
             </div>
             <!-- End of Content Wrapper -->
             <!-- Footer -->
