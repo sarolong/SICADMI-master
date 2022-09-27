@@ -78,7 +78,6 @@ function Mostrar(Letra) {
     document.getElementById('myTable').innerHTML = tabla;
 }
 
-
 function MCase(ID){
 
     var tablas = $.ajax({
